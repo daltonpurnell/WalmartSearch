@@ -74,7 +74,7 @@ class WebService {
     func getProductDetails(itemId: Int, completion: @escaping ProductDetailsResult) {
         dataTask?.cancel()
         if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
-            urlComponents.path = "\(Constants.Paths.recommendationsPath)/\(itemId)"
+            urlComponents.path = "\(Constants.Paths.lookupPath)/\(itemId)"
             urlComponents.query = "apiKey=\(Constants.Keys.walmartOpenApiKey)"
             guard let url = urlComponents.url else {
                 return
@@ -118,7 +118,7 @@ class WebService {
                 let name: String? = item["name"] as? String
                 let salePrice: Float? = item["salePrice"] as? Float
                 let shortDescription: String? = item["shortDescription"] as? String
-                let thumbnailUrlString: String? = item["thumbnailString"] as? String
+                let thumbnailUrlString: String? = item["thumbnailImage"] as? String
                 let product:Product = Product.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, thumbnailUrlString: thumbnailUrlString)
                 searchResults.append(product)
             } else {
@@ -151,7 +151,7 @@ class WebService {
                 let name: String? = item["name"] as? String
                 let salePrice: Float? = item["salePrice"] as? Float
                 let shortDescription: String? = item["shortDescription"] as? String
-                let thumbnailUrlString: String? = item["thumbnailString"] as? String
+                let thumbnailUrlString: String? = item["thumbnailImage"] as? String
                 let product:Product = Product.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, thumbnailUrlString: thumbnailUrlString)
                 recommendationsResults.append(product)
             } else {
@@ -179,8 +179,24 @@ class WebService {
             let salePrice: Float? = item["salePrice"] as? Float
             let shortDescription: String? = item["shortDescription"] as? String
             let longDescription: String? = item["longDescription"] as? String
-            let thumbnailUrlString: String? = item["thumbnailString"] as? String
-            let productDetailsObject:ProductDetails = ProductDetails.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, longDescription: longDescription, thumbnailUrlString: thumbnailUrlString)
+            let brandName: String? = item["brandName"] as? String
+            let thumbnailUrlString: String? = item["thumbnailImage"] as? String
+            let mediumImageUrlString: String? = item["mediumImage"] as? String
+            let largeImage: String? = item["largeImage"] as? String
+            let standardShipRate: Float? = item["standardShipRate"] as? Float
+            let size: String? = item["size"] as? String
+            let color: String? = item["color"] as? String
+            let marketPlace: Bool? = item["marketplace"] as? Bool
+            let shipToStore: Bool? = item["shipToStore"] as? Bool
+            let freeShipToStore: Bool? = item["freeShipToStore"] as? Bool
+            let modelNumber: String? = item["modelNumber"] as? String
+            let stock: String? = item["stock"] as? String
+            let offerType: String? = item["offerType"] as? String
+            let isTwoDayShippingAvailable: Bool? = item["isTwoDayShippingEligible"] as? Bool
+            let availableOnline: Bool? = item["availableOnline"] as? Bool
+            
+            let productDetailsObject:ProductDetails = ProductDetails.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, longDescription: longDescription, brandName: brandName, thumbnailUrlString: thumbnailUrlString, mediumImageUrlString: mediumImageUrlString, largeImage: largeImage, standardShipRate: standardShipRate, size: size, color: color, marketPlace: marketPlace, shipToStore: shipToStore, freeShipToStore: freeShipToStore, modelNumber: modelNumber, stock: stock, offerType: offerType, isTwoDayShippingAvailable: isTwoDayShippingAvailable, availableOnline: availableOnline)
+                                                                          
             productDetailsResults = productDetailsObject
         } else {
             errorMessage += "Problem mapping details dictionary\n"
