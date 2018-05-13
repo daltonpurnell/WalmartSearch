@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     let cellReuseId:String = "cell"
+    let showDetailsSegueId:String = "showDetailVC"
+    
     
     let webService:WebService = WebService()
     var searchResults:[Product] = []
@@ -45,7 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // nothing yet
+        performSegue(withIdentifier: showDetailsSegueId, sender: self)
     }
     
     // MARK: - UI Methods
@@ -85,6 +87,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             if !errorMessage.isEmpty {
                 print("Search error: " + errorMessage)
+            }
+        }
+    }
+    
+    // MARK: - Passing Data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == showDetailsSegueId {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                if let itemId = searchResults[indexPath.row].itemId {
+                    let selectedProductId:Int = itemId
+                    let detailsVC:ProductDetailViewController = segue.destination as! ProductDetailViewController
+                    detailsVC.selectedProductId = selectedProductId
+                }
             }
         }
     }
