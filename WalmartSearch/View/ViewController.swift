@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupNavBar()
-        setDynamicCellHeight()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,11 +70,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.getSearchResults(searchTerm: searchText)
             }
         }
-    }
-    
-    func setDynamicCellHeight() {
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 250
     }
     
     // MARK: - Api Calls
