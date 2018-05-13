@@ -9,6 +9,7 @@
 import UIKit
 
 class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var itemIdLabel: UILabel!
@@ -107,6 +108,11 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
                     } else {
                         shipToStoreLabel.text = "Ship to Store"
                     }
+                }
+                
+                if let imageUrl = productDetails.mediumImageUrlString {
+                    let url:URL = URL(string: imageUrl)!
+                    productImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder_image"), options: .continueInBackground, completed: nil)
                 }
             }
             

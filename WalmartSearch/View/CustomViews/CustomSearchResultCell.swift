@@ -11,6 +11,7 @@ import UIKit
 
 class CustomSearchResultCell:UITableViewCell {
     
+    @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -26,6 +27,11 @@ class CustomSearchResultCell:UITableViewCell {
         }
         if let description = product.shortDescription {
             descriptionLabel.text = description
+        }
+        
+        if let imageUrl = product.thumbnailUrlString {
+            let url:URL = URL(string: imageUrl)!
+            productImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder_image"), options: .continueInBackground, completed: nil)
         }
     }
     
