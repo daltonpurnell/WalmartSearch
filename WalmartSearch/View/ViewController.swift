@@ -52,13 +52,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - UI Methods
     func setupNavBar() {
         if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-            navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 0/255, green: 150/255, blue: 136/255, alpha: 1.0)
-            
+
+            navigationController?.navigationBar.barTintColor = Constants.Colors.walmartBlue
+            if let image = UIImage(named: "walmart-logo") {
+                let imageView = UIImageView(image: image)
+                imageView.contentMode = .scaleAspectFit
+                navigationItem.titleView = imageView
+            }
+
             let searchController = UISearchController(searchResultsController: nil)
             navigationItem.hidesSearchBarWhenScrolling = false
             navigationItem.searchController = searchController
             navigationItem.searchController?.searchBar.delegate = self
+            navigationItem.searchController?.searchBar.barStyle = .blackOpaque
         }
         
     }

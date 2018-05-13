@@ -12,9 +12,9 @@ import UIKit
 class CustomSearchResultCell:UITableViewCell {
     
     @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var nameLabel: H1Label!
+    @IBOutlet weak var priceLabel: H2Label!
+    @IBOutlet weak var descriptionLabel: P1Label!
     
     
     func populateCellWithProduct(product:Product) {

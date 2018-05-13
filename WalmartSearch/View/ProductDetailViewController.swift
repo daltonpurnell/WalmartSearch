@@ -10,16 +10,16 @@ import UIKit
 
 class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var itemIdLabel: UILabel!
-    @IBOutlet weak var stockLabel: UILabel!
-    @IBOutlet weak var availableOnlineLabel: UILabel!
-    @IBOutlet weak var standardShipRateLabel: UILabel!
-    @IBOutlet weak var marketplaceLabel: UILabel!
-    @IBOutlet weak var shipToStoreLabel: UILabel!
-    @IBOutlet weak var isTwoDayShippingAvailableLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var nameLabel: H1Label!
+    @IBOutlet weak var priceLabel: H2Label!
+    @IBOutlet weak var itemIdLabel: P1Label!
+    @IBOutlet weak var stockLabel: H2Label!
+    @IBOutlet weak var availableOnlineLabel: P1Label!
+    @IBOutlet weak var standardShipRateLabel: P1Label!
+    @IBOutlet weak var marketplaceLabel: P1Label!
+    @IBOutlet weak var shipToStoreLabel: H2Label!
+    @IBOutlet weak var isTwoDayShippingAvailableLabel: P1Label!
+    @IBOutlet weak var descriptionLabel: P1Label!
     @IBOutlet weak var collectionView: UICollectionView!
     
     let webService:WebService = WebService()

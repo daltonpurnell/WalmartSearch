@@ -10,9 +10,9 @@ import UIKit
 
 class CustomRecommendationCell: UICollectionViewCell {
     @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!    
+    @IBOutlet weak var nameLabel: H2Label!
+    @IBOutlet weak var priceLabel: H2Label!
+    @IBOutlet weak var descriptionLabel: P3Label!    
     
     func populateCellWithProduct(product:Product) {
         if let name = product.name {
