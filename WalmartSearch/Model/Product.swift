@@ -13,11 +13,11 @@ class Product {
     let itemId: Int?
     let parentItemId: Int?
     let name: String?
-    let salePrice: Float?
+    let salePrice: Double?
     let shortDescription: String?
     let thumbnailUrlString: String?
     
-    init(itemId: Int?, parentItemId: Int?, name: String?, salePrice: Float?, shortDescription: String?, thumbnailUrlString: String?) {
+    init(itemId: Int?, parentItemId: Int?, name: String?, salePrice: Double?, shortDescription: String?, thumbnailUrlString: String?) {
         self.itemId = itemId
         self.parentItemId = parentItemId
         self.name = name
