@@ -22,7 +22,7 @@ class CustomSearchResultCell:UITableViewCell {
         }
         
         if let price = product.salePrice {
-            priceLabel.text = "\(price)"
+            priceLabel.text = "$\(price)"
         }
         if let description = product.shortDescription {
             descriptionLabel.text = description

@@ -116,7 +116,7 @@ class WebService {
                 let itemId: Int? = item["itemId"] as? Int
                 let parentItemId: Int? = item["parentItemId"] as? Int
                 let name: String? = item["name"] as? String
-                let salePrice: Float? = item["salePrice"] as? Float
+                let salePrice: Double? = item["salePrice"] as? Double
                 let shortDescription: String? = item["shortDescription"] as? String
                 let thumbnailUrlString: String? = item["thumbnailImage"] as? String
                 let product:Product = Product.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, thumbnailUrlString: thumbnailUrlString)
@@ -149,7 +149,7 @@ class WebService {
                 let itemId: Int? = item["itemId"] as? Int
                 let parentItemId: Int? = item["parentItemId"] as? Int
                 let name: String? = item["name"] as? String
-                let salePrice: Float? = item["salePrice"] as? Float
+                let salePrice: Double? = item["salePrice"] as? Double
                 let shortDescription: String? = item["shortDescription"] as? String
                 let thumbnailUrlString: String? = item["thumbnailImage"] as? String
                 let product:Product = Product.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, thumbnailUrlString: thumbnailUrlString)
@@ -176,7 +176,7 @@ class WebService {
             let itemId: Int? = item["itemId"] as? Int
             let parentItemId: Int? = item["parentItemId"] as? Int
             let name: String? = item["name"] as? String
-            let salePrice: Float? = item["salePrice"] as? Float
+            let salePrice: Double? = item["salePrice"] as? Double
             let shortDescription: String? = item["shortDescription"] as? String
             let longDescription: String? = item["longDescription"] as? String
             let brandName: String? = item["brandName"] as? String
