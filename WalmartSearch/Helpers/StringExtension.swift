@@ -24,3 +24,4 @@ extension String {
         return htmlToAttributedString?.string ?? ""
     }
 }
+
