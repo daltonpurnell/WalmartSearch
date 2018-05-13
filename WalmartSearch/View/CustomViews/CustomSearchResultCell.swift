@@ -26,7 +26,7 @@ class CustomSearchResultCell:UITableViewCell {
             priceLabel.text = "$\(price)"
         }
         if let description = product.shortDescription {
-            descriptionLabel.text = description
+            descriptionLabel.text = description.htmlToString
         }
         
         if let imageUrl = product.thumbnailUrlString {
