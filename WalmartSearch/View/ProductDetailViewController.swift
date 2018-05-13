@@ -109,6 +109,11 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
                         shipToStoreLabel.text = "Ship to Store"
                     }
                 }
+                
+                if let imageUrl = productDetails.mediumImageUrlString {
+                    let url:URL = URL(string: imageUrl)!
+                    productImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder_image"), options: .continueInBackground, completed: nil)
+                }
             }
             
             if let twoDayShipping = productDetails.isTwoDayShippingAvailable {

@@ -25,6 +25,11 @@ class CustomRecommendationCell: UICollectionViewCell {
         if let description = product.shortDescription {
             descriptionLabel.text = description
         }
+        
+        if let imageUrl = product.thumbnailUrlString {
+            let url:URL = URL(string: imageUrl)!
+            productImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder_image"), options: .continueInBackground, completed: nil)
+        }
     }
     
 }
