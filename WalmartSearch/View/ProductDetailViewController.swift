@@ -21,6 +21,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var isTwoDayShippingAvailableLabel: P1Label!
     @IBOutlet weak var descriptionLabel: P1Label!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     
     let webService:WebService = WebService()
     let collectionViewCellReuseId:String = "cell"
@@ -57,9 +58,12 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             if let recs = recommendationsArray {
                 self.recommendations = recs
                 self.collectionView.reloadData()
+                self.collectionViewHeightConstraint.constant = 128.0
             }
             if !errorMessage.isEmpty {
                 print("Recommendations error: " + errorMessage)
+                self.collectionViewHeightConstraint.constant = 0.0
+                
             }
 
         }
