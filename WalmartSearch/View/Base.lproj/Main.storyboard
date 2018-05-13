@@ -86,6 +86,7 @@
                                             <outlet property="descriptionLabel" destination="M9l-6p-ngJ" id="mwW-OS-PS8"/>
                                             <outlet property="nameLabel" destination="tiZ-ue-oy8" id="seg-uS-TKy"/>
                                             <outlet property="priceLabel" destination="FVo-lM-9b2" id="bvR-pa-beb"/>
+                                            <outlet property="productImageView" destination="dJl-b2-JE2" id="HXI-Iu-NpA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -188,6 +189,7 @@
                                             <outlet property="descriptionLabel" destination="4dT-D8-QVO" id="dON-hF-PQp"/>
                                             <outlet property="nameLabel" destination="ERz-GA-Ry8" id="7IY-vb-DP5"/>
                                             <outlet property="priceLabel" destination="eSD-z1-7Ew" id="W9h-M1-nRd"/>
+                                            <outlet property="productImageView" destination="5tU-Il-Gto" id="hkr-Iv-Te4"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -366,6 +368,7 @@
                         <outlet property="marketplaceLabel" destination="Mz8-to-4o4" id="hYT-hc-64P"/>
                         <outlet property="nameLabel" destination="Jcq-wV-WEr" id="UNO-EA-bQb"/>
                         <outlet property="priceLabel" destination="d9x-d5-34b" id="oAg-EI-v01"/>
+                        <outlet property="productImageView" destination="tfe-KW-eze" id="qaI-tE-K4p"/>
                         <outlet property="shipToStoreLabel" destination="Brf-Zd-OnP" id="zJM-H2-Gl3"/>
                         <outlet property="standardShipRateLabel" destination="vUN-Eh-soS" id="dt2-eM-eJg"/>
                         <outlet property="stockLabel" destination="9UR-uj-ugR" id="mUl-Vc-vTw"/>

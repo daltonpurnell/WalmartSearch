@@ -9,6 +9,7 @@
 import UIKit
 
 class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var itemIdLabel: UILabel!
