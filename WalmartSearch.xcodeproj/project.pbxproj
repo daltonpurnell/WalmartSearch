@@ -25,6 +25,12 @@
 		CF53CEDB20A78D9800C8CB72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53CEDA20A78D9800C8CB72 /* Constants.swift */; };
 		CF53CEE220A79C4400C8CB72 /* CustomSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53CEE120A79C4300C8CB72 /* CustomSearchResultCell.swift */; };
 		CF53CEE720A81F2C00C8CB72 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53CEE620A81F2C00C8CB72 /* StringExtension.swift */; };
+		CF53CEF120A866E600C8CB72 /* Bogle-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEEB20A866E500C8CB72 /* Bogle-Black.otf */; };
+		CF53CEF220A866E600C8CB72 /* Bogle-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEEC20A866E500C8CB72 /* Bogle-BoldItalic.otf */; };
+		CF53CEF320A866E600C8CB72 /* Bogle-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEED20A866E500C8CB72 /* Bogle-Regular.otf */; };
+		CF53CEF420A866E600C8CB72 /* Bogle-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEEE20A866E600C8CB72 /* Bogle-BlackItalic.otf */; };
+		CF53CEF520A866E600C8CB72 /* Bogle-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEEF20A866E600C8CB72 /* Bogle-RegularItalic.otf */; };
+		CF53CEF620A866E600C8CB72 /* Bogle-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEF020A866E600C8CB72 /* Bogle-Bold.otf */; };
 		FCF4BAFC1A3800F044F81494 /* Pods_WalmartSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1207DCBFFA1CB6CBE43A9E /* Pods_WalmartSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +80,12 @@
 		CF53CEE120A79C4300C8CB72 /* CustomSearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchResultCell.swift; sourceTree = "<group>"; };
 		CF53CEE320A8131600C8CB72 /* WalmartSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WalmartSearch-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF53CEE620A81F2C00C8CB72 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		CF53CEEB20A866E500C8CB72 /* Bogle-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bogle-Black.otf"; sourceTree = "<group>"; };
+		CF53CEEC20A866E500C8CB72 /* Bogle-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bogle-BoldItalic.otf"; sourceTree = "<group>"; };
+		CF53CEED20A866E500C8CB72 /* Bogle-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bogle-Regular.otf"; sourceTree = "<group>"; };
+		CF53CEEE20A866E600C8CB72 /* Bogle-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bogle-BlackItalic.otf"; sourceTree = "<group>"; };
+		CF53CEEF20A866E600C8CB72 /* Bogle-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bogle-RegularItalic.otf"; sourceTree = "<group>"; };
+		CF53CEF020A866E600C8CB72 /* Bogle-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bogle-Bold.otf"; sourceTree = "<group>"; };
 		D36D5C2FB885B2DDB19663C8 /* Pods-WalmartSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalmartSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalmartSearch/Pods-WalmartSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1207DCBFFA1CB6CBE43A9E /* Pods_WalmartSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalmartSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC222B9F1F5A78D4DF97FECB /* Pods_WalmartSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalmartSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,8 +168,8 @@
 		CF53CE9D20A789B300C8CB72 /* WalmartSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CF53CEE920A8669000C8CB72 /* SupportingFiles */,
 				CF53CE9E20A789B300C8CB72 /* AppDelegate.swift */,
-				CF53CEA520A789B600C8CB72 /* Assets.xcassets */,
 				CF53CEAA20A789B600C8CB72 /* Info.plist */,
 				CF53CEDD20A796CB00C8CB72 /* Helpers */,
 				CF53CEDE20A796D900C8CB72 /* Controller */,
@@ -232,6 +244,28 @@
 				CF53CEA720A789B600C8CB72 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CF53CEE920A8669000C8CB72 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CF53CEEA20A866AE00C8CB72 /* Fonts */,
+				CF53CEA520A789B600C8CB72 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CF53CEEA20A866AE00C8CB72 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CF53CEEB20A866E500C8CB72 /* Bogle-Black.otf */,
+				CF53CEEE20A866E600C8CB72 /* Bogle-BlackItalic.otf */,
+				CF53CEF020A866E600C8CB72 /* Bogle-Bold.otf */,
+				CF53CEEC20A866E500C8CB72 /* Bogle-BoldItalic.otf */,
+				CF53CEED20A866E500C8CB72 /* Bogle-Regular.otf */,
+				CF53CEEF20A866E600C8CB72 /* Bogle-RegularItalic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +382,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF53CEF620A866E600C8CB72 /* Bogle-Bold.otf in Resources */,
 				CF53CEA920A789B600C8CB72 /* LaunchScreen.storyboard in Resources */,
+				CF53CEF220A866E600C8CB72 /* Bogle-BoldItalic.otf in Resources */,
+				CF53CEF320A866E600C8CB72 /* Bogle-Regular.otf in Resources */,
+				CF53CEF420A866E600C8CB72 /* Bogle-BlackItalic.otf in Resources */,
+				CF53CEF520A866E600C8CB72 /* Bogle-RegularItalic.otf in Resources */,
+				CF53CEF120A866E600C8CB72 /* Bogle-Black.otf in Resources */,
 				CF53CEA620A789B600C8CB72 /* Assets.xcassets in Resources */,
 				CF53CEA420A789B300C8CB72 /* Main.storyboard in Resources */,
 			);
