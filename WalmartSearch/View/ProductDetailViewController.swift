@@ -121,7 +121,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             }
             
             if let description = productDetails.longDescription {
-                descriptionLabel.text = description
+                descriptionLabel.text = description.htmlToString
             }
         }
     

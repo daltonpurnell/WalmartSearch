@@ -23,7 +23,7 @@ class CustomRecommendationCell: UICollectionViewCell {
             priceLabel.text = "$\(price)"
         }
         if let description = product.shortDescription {
-            descriptionLabel.text = description
+            descriptionLabel.text = description.htmlToString
         }
         
         if let imageUrl = product.thumbnailUrlString {
