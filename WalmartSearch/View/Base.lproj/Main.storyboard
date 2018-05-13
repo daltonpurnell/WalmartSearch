@@ -362,6 +362,7 @@
                     <connections>
                         <outlet property="availableOnlineLabel" destination="Q4d-IK-QJp" id="vJx-3H-fDp"/>
                         <outlet property="collectionView" destination="bVR-ha-fsy" id="2Tg-aW-bOY"/>
+                        <outlet property="collectionViewHeightConstraint" destination="iL2-kc-UHL" id="tzh-vO-SZ4"/>
                         <outlet property="descriptionLabel" destination="wvj-eX-P70" id="bSF-po-jfp"/>
                         <outlet property="isTwoDayShippingAvailableLabel" destination="OTK-1o-nAq" id="pua-2p-Kfw"/>
                         <outlet property="itemIdLabel" destination="675-r4-cel" id="ACy-z0-Rdq"/>
