@@ -63,8 +63,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let searchController = UISearchController(searchResultsController: nil)
             navigationItem.hidesSearchBarWhenScrolling = false
             navigationItem.searchController = searchController
-            navigationItem.searchController?.searchBar.delegate = self
-            navigationItem.searchController?.searchBar.barStyle = .blackOpaque
+            searchController.searchBar.delegate = self
+            
+            if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+                if let backgroundview = textfield.subviews.first {
+                    backgroundview.backgroundColor = UIColor.white
+                    backgroundview.layer.cornerRadius = 10
+                    backgroundview.clipsToBounds = true
+                }
+            }
+            searchController.searchBar.tintColor = UIColor.white
+            searchController.searchBar.setImage(UIImage(named: "clear-icon"), for: UISearchBarIcon.clear, state: .normal)
+            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: Constants.Colors.darkBlue]
         }
         
     }
