@@ -8,20 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var trendingProductsCollectionView: UICollectionView!
     
-    let cellReuseId:String = "cell"
-    let showDetailsSegueId:String = "showDetailVC"
+    let tableViewCellReuseId:String = "cell"
+    let collectionViewCellReuseId:String = "cell"
+    let showSearchResultDetailsSegueId:String = "showSearchDetailVC"
+    let showTrendingProductDetailsSegueId:String = "showTrendingDetailVC"
+
     
     
     let webService:WebService = WebService()
     var searchResults:[Product] = []
+    var trendingProducts:[Product] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.getTrendingProducts()
         setupNavBar()
     }
 
@@ -37,7 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:CustomSearchResultCell = tableView.dequeueReusableCell(withIdentifier: cellReuseId, for: indexPath) as! CustomSearchResultCell
+        let cell:CustomSearchResultCell = tableView.dequeueReusableCell(withIdentifier: tableViewCellReuseId, for: indexPath) as! CustomSearchResultCell
         
         let product:Product = searchResults[indexPath.row]
         cell.populateCellWithProduct(product: product)
@@ -46,7 +52,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: showDetailsSegueId, sender: self)
+        performSegue(withIdentifier: showSearchResultDetailsSegueId, sender: self)
     }
     
     // MARK: - UI Methods
@@ -79,6 +85,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    // MARK: - CollectionView Delegate & DataSource Methods
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return trendingProducts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:CustomRecommendationCell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellReuseId, for: indexPath) as! CustomRecommendationCell
+        let product:Product = trendingProducts[indexPath.row]
+        cell.populateCellWithProduct(product:product)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let itemId = trendingProducts[indexPath.row].itemId {
+            performSegue(withIdentifier: showTrendingProductDetailsSegueId, sender: self)
+        }
+    }
+    
     // MARK: - Search Bar Delegate Methods
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let searchText = searchBar.text {
@@ -101,12 +125,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func getTrendingProducts() {
+        
+        webService.getTrendingProducts { (results, errorMessage) in
+            if let results = results {
+                self.trendingProducts = results
+                self.trendingProductsCollectionView.reloadData()
+            }
+            if !errorMessage.isEmpty {
+                print("Trending products error: " + errorMessage)
+            }
+        }
+    }
+    
     // MARK: - Passing Data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == showDetailsSegueId {
+        if segue.identifier == showSearchResultDetailsSegueId {
+            
             if let indexPath = tableView.indexPathForSelectedRow {
-                if let itemId = searchResults[indexPath.row].itemId {
-                    let selectedProductId:Int = itemId
+                if let searchResultItemId = searchResults[indexPath.row].itemId {
+                    let selectedProductId:Int = searchResultItemId
+                    let detailsVC:ProductDetailViewController = segue.destination as! ProductDetailViewController
+                    detailsVC.selectedProductId = selectedProductId
+                }
+                
+            }
+        } else if segue.identifier == showTrendingProductDetailsSegueId {
+            
+            if let indexPath = trendingProductsCollectionView.indexPathsForSelectedItems?.first {
+                if let trendingProductItemId = trendingProducts[indexPath.row].itemId {
+                    let selectedProductId:Int = trendingProductItemId
                     let detailsVC:ProductDetailViewController = segue.destination as! ProductDetailViewController
                     detailsVC.selectedProductId = selectedProductId
                 }

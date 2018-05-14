@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kp1-B6-Ny2">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="288" id="zcc-4v-soB" customClass="CustomSearchResultCell" customModule="WalmartSearch" customModuleProvider="target">
@@ -95,25 +95,105 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Map-6d-3VY"/>
                                 </connections>
                             </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OfX-Hd-n61">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Ipi-Xy-Xsg"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WvO-F7-3Wz">
+                                    <size key="itemSize" width="331" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ljm-ea-fNk" customClass="CustomRecommendationCell" customModule="WalmartSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="331" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AW3-Cg-fG1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="tdg-q9-VnQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM3-SV-3zf" customClass="H2Label" customModule="WalmartSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="117" y="0.0" width="214" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7id-6I-GAs" customClass="H2Label" customModule="WalmartSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="117" y="20" width="214" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLm-bo-4Zm" customClass="P3Label" customModule="WalmartSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="117" y="21" width="214" height="107"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="YM3-SV-3zf" firstAttribute="leading" secondItem="AW3-Cg-fG1" secondAttribute="trailing" constant="7" id="0BU-BL-KFX"/>
+                                            <constraint firstItem="AW3-Cg-fG1" firstAttribute="top" secondItem="ljm-ea-fNk" secondAttribute="top" id="ELk-XZ-QY1"/>
+                                            <constraint firstItem="iLm-bo-4Zm" firstAttribute="top" secondItem="7id-6I-GAs" secondAttribute="bottom" constant="1" id="GAt-lt-bLl"/>
+                                            <constraint firstItem="iLm-bo-4Zm" firstAttribute="leading" secondItem="AW3-Cg-fG1" secondAttribute="trailing" constant="7" id="Qie-72-fKX"/>
+                                            <constraint firstAttribute="trailing" secondItem="7id-6I-GAs" secondAttribute="trailing" id="XEl-aG-vpJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="YM3-SV-3zf" secondAttribute="trailing" id="Xie-eS-IBc"/>
+                                            <constraint firstItem="AW3-Cg-fG1" firstAttribute="leading" secondItem="ljm-ea-fNk" secondAttribute="leading" id="Z01-bq-OlZ"/>
+                                            <constraint firstItem="7id-6I-GAs" firstAttribute="leading" secondItem="AW3-Cg-fG1" secondAttribute="trailing" constant="7" id="gLd-5u-zYH"/>
+                                            <constraint firstAttribute="trailing" secondItem="iLm-bo-4Zm" secondAttribute="trailing" id="gxz-nz-U8g"/>
+                                            <constraint firstAttribute="bottom" secondItem="AW3-Cg-fG1" secondAttribute="bottom" id="mXw-Ia-j5N"/>
+                                            <constraint firstItem="7id-6I-GAs" firstAttribute="top" secondItem="ljm-ea-fNk" secondAttribute="top" constant="20" id="o8E-75-UyH"/>
+                                            <constraint firstAttribute="bottom" secondItem="iLm-bo-4Zm" secondAttribute="bottom" id="osE-7G-G5z"/>
+                                            <constraint firstItem="7id-6I-GAs" firstAttribute="top" secondItem="YM3-SV-3zf" secondAttribute="bottom" constant="-0.5" id="pCK-g9-EdH"/>
+                                            <constraint firstItem="YM3-SV-3zf" firstAttribute="top" secondItem="ljm-ea-fNk" secondAttribute="top" id="qIe-yf-wj1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="iLm-bo-4Zm" id="O0X-sn-sfh"/>
+                                            <outlet property="nameLabel" destination="YM3-SV-3zf" id="V4H-II-qNU"/>
+                                            <outlet property="priceLabel" destination="7id-6I-GAs" id="b1Q-qH-0Oi"/>
+                                            <outlet property="productImageView" destination="AW3-Cg-fG1" id="uJy-yW-Gem"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4dK-UG-vaT"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pTS-51-EcJ"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kp1-B6-Ny2" secondAttribute="trailing" id="8ME-AT-VJO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kp1-B6-Ny2" secondAttribute="bottom" id="E7L-rP-19T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OfX-Hd-n61" secondAttribute="bottom" id="GPH-nk-tui"/>
+                            <constraint firstItem="OfX-Hd-n61" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N34-Ny-LXe"/>
                             <constraint firstItem="Kp1-B6-Ny2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P8O-kF-fqq"/>
                             <constraint firstItem="Kp1-B6-Ny2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lRs-qR-SN1"/>
+                            <constraint firstItem="OfX-Hd-n61" firstAttribute="top" secondItem="Kp1-B6-Ny2" secondAttribute="bottom" constant="8" id="pz2-3j-4PD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OfX-Hd-n61" secondAttribute="trailing" id="ued-BR-s54"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="0jn-kr-kfC"/>
                     <connections>
                         <outlet property="tableView" destination="Kp1-B6-Ny2" id="UV8-0O-1Pl"/>
-                        <segue destination="tlJ-N9-1EO" kind="show" identifier="showDetailVC" id="LfX-r6-1TU"/>
+                        <outlet property="trendingProductsCollectionView" destination="OfX-Hd-n61" id="iiY-Mn-IKc"/>
+                        <segue destination="tlJ-N9-1EO" kind="show" identifier="showSearchDetailVC" id="LfX-r6-1TU"/>
+                        <segue destination="tlJ-N9-1EO" kind="show" identifier="showTrendingDetailVC" id="KUb-ar-tou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="131"/>
+            <point key="canvasLocation" x="1044" y="130.88455772113943"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="txJ-aQ-guD">
@@ -377,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugP-xG-nZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1733.5999999999999" y="130.88455772113943"/>
+            <point key="canvasLocation" x="1846" y="189"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sMN-jv-Uhg">
@@ -398,4 +478,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KUb-ar-tou"/>
+    </inferredMetricsTieBreakers>
 </document>
