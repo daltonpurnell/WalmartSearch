@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     let webService:WebService = WebService()
+    let activityIndicatorManager:ActivityIndicatorManager = ActivityIndicatorManager()
     var searchResults:[Product] = []
     var trendingProducts:[Product] = []
     
@@ -86,6 +87,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    
     // MARK: - CollectionView Delegate & DataSource Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return trendingProducts.count
@@ -121,6 +123,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - Api Calls
     func getSearchResults(searchTerm:String) {
+        let loadingIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: self.view)
         webService.getSearchResults(searchTerm: searchTerm) { (results, errorMessage) in
             if let results = results {
                 self.searchResults = results
@@ -129,11 +132,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if !errorMessage.isEmpty {
                 print("Search error: " + errorMessage)
             }
+            loadingIndicator.dismissLoadingIndicator()
         }
     }
     
     func getTrendingProducts() {
-        
+        let loadingIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: self.view)
         webService.getTrendingProducts { (results, errorMessage) in
             if let results = results {
                 self.trendingProducts = results
@@ -142,6 +146,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if !errorMessage.isEmpty {
                 print("Trending products error: " + errorMessage)
             }
+            loadingIndicator.dismissLoadingIndicator()
         }
     }
     
