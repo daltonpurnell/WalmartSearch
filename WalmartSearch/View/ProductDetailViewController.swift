@@ -22,8 +22,10 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var descriptionLabel: P1Label!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     let webService:WebService = WebService()
+    let activityIndicatorManager:ActivityIndicatorManager = ActivityIndicatorManager()
     let collectionViewCellReuseId:String = "cell"
     let collectionViewHeaderReuseId:String = "collectionViewHeader"
 
@@ -43,11 +45,12 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     
     // MARK: - Api Calls
     func getProductDetailsFor(itemId: Int) {
+        let loadingIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: self.view)
         webService.getProductDetails(itemId: itemId) { (productDetailsObject, errorMessage) in
             if let productDetailsObj = productDetailsObject {
                 self.productDetails = productDetailsObj
                 self.populateViewWithProductDetails()
-                self.getRecommendationsFor(itemId: itemId)
+                self.getRecommendationsFor(itemId: itemId, loadingIndicator:loadingIndicator)
             }
             if !errorMessage.isEmpty {
                 print("Lookup details error: " + errorMessage)
@@ -55,7 +58,8 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
         }
     }
     
-    func getRecommendationsFor(itemId: Int) {
+    func getRecommendationsFor(itemId: Int, loadingIndicator:UIActivityIndicatorView) {
+//        let loadingIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: self.collectionView)
         webService.getRecommendations(itemId: itemId) { (recommendationsArray, errorMessage) in
             if let recs = recommendationsArray {
                 self.recommendations = recs
@@ -67,7 +71,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
                 self.collectionViewHeightConstraint.constant = 0.0
                 
             }
-
+            loadingIndicator.dismissLoadingIndicator()
         }
     }
     

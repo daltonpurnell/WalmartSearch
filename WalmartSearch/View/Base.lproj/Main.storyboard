@@ -480,6 +480,7 @@
                         <outlet property="nameLabel" destination="Jcq-wV-WEr" id="UNO-EA-bQb"/>
                         <outlet property="priceLabel" destination="d9x-d5-34b" id="oAg-EI-v01"/>
                         <outlet property="productImageView" destination="tfe-KW-eze" id="qaI-tE-K4p"/>
+                        <outlet property="scrollView" destination="DKq-Ig-ctW" id="ydI-Uc-yeQ"/>
                         <outlet property="shipToStoreLabel" destination="Brf-Zd-OnP" id="zJM-H2-Gl3"/>
                         <outlet property="standardShipRateLabel" destination="vUN-Eh-soS" id="dt2-eM-eJg"/>
                         <outlet property="stockLabel" destination="9UR-uj-ugR" id="mUl-Vc-vTw"/>
