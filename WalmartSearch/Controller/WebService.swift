@@ -11,19 +11,19 @@ import Foundation
 class WebService {
     
     typealias JSONDictionary = [String: Any]
-    typealias SearchResult = ([Product]?, String) -> ()
-    typealias RecommendationsResult = ([Product]?, String) -> ()
+    typealias ProductResult = ([Product]?, String) -> ()
     typealias ProductDetailsResult = (ProductDetails?, String) -> ()
     
     var searchResults:[Product] = []
     var recommendationsResults:[Product] = []
     var productDetailsResults:ProductDetails?
+    var trendingResults:[Product] = []
     var errorMessage = ""
     
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     
-    func getSearchResults(searchTerm: String, completion: @escaping SearchResult) {
+    func getSearchResults(searchTerm: String, completion: @escaping ProductResult) {
         dataTask?.cancel()
         if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
             urlComponents.path = Constants.Paths.searchPath
@@ -37,7 +37,7 @@ class WebService {
                 } else if let data = data,
                     let response = response as? HTTPURLResponse,
                     response.statusCode == 200 {
-                    self.mapSearchResponse(data)
+                    self.mapResponse(data, isMappingTrendingResults: false)
                     DispatchQueue.main.async {
                         completion(self.searchResults, self.errorMessage)
                     }
@@ -47,7 +47,7 @@ class WebService {
         }
     }
     
-    func getRecommendations(itemId: Int, completion: @escaping RecommendationsResult) {
+    func getRecommendations(itemId: Int, completion: @escaping ProductResult) {
         dataTask?.cancel()
         if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
             urlComponents.path = Constants.Paths.recommendationsPath
@@ -64,6 +64,30 @@ class WebService {
                     self.mapRecommendationsResponse(data)
                     DispatchQueue.main.async {
                         completion(self.recommendationsResults, self.errorMessage)
+                    }
+                }
+            }
+            dataTask?.resume()
+        }
+    }
+    
+    func getTrendingProducts(completion: @escaping ProductResult) {
+        dataTask?.cancel()
+        if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
+            urlComponents.path = Constants.Paths.trendingPath
+            urlComponents.query = "apiKey=\(Constants.Keys.walmartOpenApiKey)"
+            guard let url = urlComponents.url else {
+                return
+            }
+            dataTask = defaultSession.dataTask(with: url) { data, response, error in
+                if let error = error {
+                    self.errorMessage += "DataTask error: " + error.localizedDescription + "\n"
+                } else if let data = data,
+                    let response = response as? HTTPURLResponse,
+                    response.statusCode == 200 {
+                    self.mapResponse(data, isMappingTrendingResults: true)
+                    DispatchQueue.main.async {
+                        completion(self.trendingResults, self.errorMessage)
                     }
                 }
             }
@@ -95,10 +119,10 @@ class WebService {
         }
     }
     
-    fileprivate func mapSearchResponse(_ data: Data) {
+    fileprivate func mapResponse(_ data: Data, isMappingTrendingResults: Bool) {
         var response: JSONDictionary?
-        searchResults.removeAll()
-        
+        isMappingTrendingResults ? trendingResults.removeAll() : searchResults.removeAll()
+
         do {
             response = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
         } catch let parseError as NSError {
@@ -120,7 +144,7 @@ class WebService {
                 let shortDescription: String? = item["shortDescription"] as? String
                 let thumbnailUrlString: String? = item["thumbnailImage"] as? String
                 let product:Product = Product.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, thumbnailUrlString: thumbnailUrlString)
-                searchResults.append(product)
+                isMappingTrendingResults ? trendingResults.append(product) : searchResults.append(product)
             } else {
                 errorMessage += "Problem mapping search result dictionary\n"
             }

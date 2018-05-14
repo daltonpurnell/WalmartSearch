@@ -22,6 +22,7 @@ struct Constants {
         static let lookupPath:String = "/v1/items"
         static let searchPath:String = "/v1/search"
         static let recommendationsPath:String = "/v1/nbp"
+        static let trendingPath:String = "/v1/trends"
     }
     
     struct Fonts {
