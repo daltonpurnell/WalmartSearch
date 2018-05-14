@@ -121,20 +121,14 @@
                                                         <constraint firstAttribute="width" constant="110" id="tdg-q9-VnQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM3-SV-3zf" customClass="H2Label" customModule="WalmartSearch" customModuleProvider="target">
-                                                    <rect key="frame" x="117" y="0.0" width="214" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM3-SV-3zf" customClass="H3Label" customModule="WalmartSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="117" y="0.0" width="214" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7id-6I-GAs" customClass="H2Label" customModule="WalmartSearch" customModuleProvider="target">
-                                                    <rect key="frame" x="117" y="20" width="214" height="0.0"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLm-bo-4Zm" customClass="P3Label" customModule="WalmartSearch" customModuleProvider="target">
-                                                    <rect key="frame" x="117" y="21" width="214" height="107"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7id-6I-GAs" customClass="P1Label" customModule="WalmartSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="117" y="-0.5" width="214" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -144,21 +138,15 @@
                                         <constraints>
                                             <constraint firstItem="YM3-SV-3zf" firstAttribute="leading" secondItem="AW3-Cg-fG1" secondAttribute="trailing" constant="7" id="0BU-BL-KFX"/>
                                             <constraint firstItem="AW3-Cg-fG1" firstAttribute="top" secondItem="ljm-ea-fNk" secondAttribute="top" id="ELk-XZ-QY1"/>
-                                            <constraint firstItem="iLm-bo-4Zm" firstAttribute="top" secondItem="7id-6I-GAs" secondAttribute="bottom" constant="1" id="GAt-lt-bLl"/>
-                                            <constraint firstItem="iLm-bo-4Zm" firstAttribute="leading" secondItem="AW3-Cg-fG1" secondAttribute="trailing" constant="7" id="Qie-72-fKX"/>
                                             <constraint firstAttribute="trailing" secondItem="7id-6I-GAs" secondAttribute="trailing" id="XEl-aG-vpJ"/>
                                             <constraint firstAttribute="trailing" secondItem="YM3-SV-3zf" secondAttribute="trailing" id="Xie-eS-IBc"/>
                                             <constraint firstItem="AW3-Cg-fG1" firstAttribute="leading" secondItem="ljm-ea-fNk" secondAttribute="leading" id="Z01-bq-OlZ"/>
                                             <constraint firstItem="7id-6I-GAs" firstAttribute="leading" secondItem="AW3-Cg-fG1" secondAttribute="trailing" constant="7" id="gLd-5u-zYH"/>
-                                            <constraint firstAttribute="trailing" secondItem="iLm-bo-4Zm" secondAttribute="trailing" id="gxz-nz-U8g"/>
                                             <constraint firstAttribute="bottom" secondItem="AW3-Cg-fG1" secondAttribute="bottom" id="mXw-Ia-j5N"/>
-                                            <constraint firstItem="7id-6I-GAs" firstAttribute="top" secondItem="ljm-ea-fNk" secondAttribute="top" constant="20" id="o8E-75-UyH"/>
-                                            <constraint firstAttribute="bottom" secondItem="iLm-bo-4Zm" secondAttribute="bottom" id="osE-7G-G5z"/>
-                                            <constraint firstItem="7id-6I-GAs" firstAttribute="top" secondItem="YM3-SV-3zf" secondAttribute="bottom" constant="-0.5" id="pCK-g9-EdH"/>
+                                            <constraint firstItem="7id-6I-GAs" firstAttribute="top" secondItem="YM3-SV-3zf" secondAttribute="bottom" id="pCK-g9-EdH"/>
                                             <constraint firstItem="YM3-SV-3zf" firstAttribute="top" secondItem="ljm-ea-fNk" secondAttribute="top" id="qIe-yf-wj1"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="descriptionLabel" destination="iLm-bo-4Zm" id="O0X-sn-sfh"/>
                                             <outlet property="nameLabel" destination="YM3-SV-3zf" id="V4H-II-qNU"/>
                                             <outlet property="priceLabel" destination="7id-6I-GAs" id="b1Q-qH-0Oi"/>
                                             <outlet property="productImageView" destination="AW3-Cg-fG1" id="uJy-yW-Gem"/>
@@ -244,20 +232,14 @@
                                                         <constraint firstAttribute="width" constant="110" id="8UC-mY-imT"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERz-GA-Ry8" customClass="H2Label" customModule="WalmartSearch" customModuleProvider="target">
-                                                    <rect key="frame" x="117" y="0.0" width="214" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERz-GA-Ry8" customClass="H3Label" customModule="WalmartSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="117" y="0.0" width="214" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSD-z1-7Ew" customClass="H2Label" customModule="WalmartSearch" customModuleProvider="target">
-                                                    <rect key="frame" x="117" y="20" width="214" height="0.0"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dT-D8-QVO" customClass="P3Label" customModule="WalmartSearch" customModuleProvider="target">
-                                                    <rect key="frame" x="117" y="21" width="214" height="107"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSD-z1-7Ew" customClass="P1Label" customModule="WalmartSearch" customModuleProvider="target">
+                                                    <rect key="frame" x="117" y="0.0" width="214" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -265,23 +247,17 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="4dT-D8-QVO" firstAttribute="top" secondItem="eSD-z1-7Ew" secondAttribute="bottom" constant="1" id="1eL-Y6-r0l"/>
-                                            <constraint firstAttribute="bottom" secondItem="4dT-D8-QVO" secondAttribute="bottom" id="261-eb-hwC"/>
-                                            <constraint firstItem="4dT-D8-QVO" firstAttribute="leading" secondItem="5tU-Il-Gto" secondAttribute="trailing" constant="7" id="9cR-Fl-1yu"/>
                                             <constraint firstAttribute="trailing" secondItem="ERz-GA-Ry8" secondAttribute="trailing" id="Fj1-Ba-Mgg"/>
                                             <constraint firstItem="ERz-GA-Ry8" firstAttribute="top" secondItem="J7E-q0-Rf9" secondAttribute="top" id="GMv-Bd-XLY"/>
                                             <constraint firstItem="5tU-Il-Gto" firstAttribute="top" secondItem="J7E-q0-Rf9" secondAttribute="top" id="GQZ-P4-m8f"/>
                                             <constraint firstAttribute="bottom" secondItem="5tU-Il-Gto" secondAttribute="bottom" id="JMN-bM-wPV"/>
                                             <constraint firstItem="5tU-Il-Gto" firstAttribute="leading" secondItem="J7E-q0-Rf9" secondAttribute="leading" id="LGI-OB-2FM"/>
-                                            <constraint firstItem="eSD-z1-7Ew" firstAttribute="top" secondItem="J7E-q0-Rf9" secondAttribute="top" constant="20" id="Rge-PS-SjZ"/>
-                                            <constraint firstItem="eSD-z1-7Ew" firstAttribute="top" secondItem="ERz-GA-Ry8" secondAttribute="bottom" constant="-0.5" id="VTO-9F-ymY"/>
-                                            <constraint firstAttribute="trailing" secondItem="4dT-D8-QVO" secondAttribute="trailing" id="X9a-lg-84H"/>
+                                            <constraint firstItem="eSD-z1-7Ew" firstAttribute="top" secondItem="ERz-GA-Ry8" secondAttribute="bottom" id="VTO-9F-ymY"/>
                                             <constraint firstItem="eSD-z1-7Ew" firstAttribute="leading" secondItem="5tU-Il-Gto" secondAttribute="trailing" constant="7" id="cBJ-eQ-b9i"/>
                                             <constraint firstAttribute="trailing" secondItem="eSD-z1-7Ew" secondAttribute="trailing" id="jpU-ix-fPL"/>
                                             <constraint firstItem="ERz-GA-Ry8" firstAttribute="leading" secondItem="5tU-Il-Gto" secondAttribute="trailing" constant="7" id="n71-2v-JY3"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="descriptionLabel" destination="4dT-D8-QVO" id="dON-hF-PQp"/>
                                             <outlet property="nameLabel" destination="ERz-GA-Ry8" id="7IY-vb-DP5"/>
                                             <outlet property="priceLabel" destination="eSD-z1-7Ew" id="W9h-M1-nRd"/>
                                             <outlet property="productImageView" destination="5tU-Il-Gto" id="hkr-Iv-Te4"/>

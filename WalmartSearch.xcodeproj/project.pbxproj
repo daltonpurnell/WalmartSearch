@@ -38,6 +38,7 @@
 		CF53CF0220A88A4900C8CB72 /* P3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53CF0120A88A4900C8CB72 /* P3Label.swift */; };
 		CFB8827A20A9D23200489433 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8827920A9D23200489433 /* ActivityIndicatorManager.swift */; };
 		CFB8827C20A9FE2F00489433 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8827B20A9FE2F00489433 /* TableViewHelper.swift */; };
+		CFB8827E20AA0DE200489433 /* H3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8827D20AA0DE200489433 /* H3Label.swift */; };
 		FCF4BAFC1A3800F044F81494 /* Pods_WalmartSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1207DCBFFA1CB6CBE43A9E /* Pods_WalmartSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		CF53CF0120A88A4900C8CB72 /* P3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P3Label.swift; sourceTree = "<group>"; };
 		CFB8827920A9D23200489433 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		CFB8827B20A9FE2F00489433 /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
+		CFB8827D20AA0DE200489433 /* H3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H3Label.swift; sourceTree = "<group>"; };
 		D36D5C2FB885B2DDB19663C8 /* Pods-WalmartSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalmartSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalmartSearch/Pods-WalmartSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1207DCBFFA1CB6CBE43A9E /* Pods_WalmartSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalmartSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC222B9F1F5A78D4DF97FECB /* Pods_WalmartSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalmartSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +230,7 @@
 				CF53CEE620A81F2C00C8CB72 /* StringExtension.swift */,
 				CF53CEF920A8854200C8CB72 /* H1Label.swift */,
 				CF53CEFB20A886D100C8CB72 /* H2Label.swift */,
+				CFB8827D20AA0DE200489433 /* H3Label.swift */,
 				CF53CEFD20A886E400C8CB72 /* P1Label.swift */,
 				CF53CEFF20A886FF00C8CB72 /* P2Label.swift */,
 				CF53CF0120A88A4900C8CB72 /* P3Label.swift */,
@@ -602,6 +605,7 @@
 				CFB8827C20A9FE2F00489433 /* TableViewHelper.swift in Sources */,
 				CF53CECF20A78A6C00C8CB72 /* CardView.swift in Sources */,
 				CF53CEFA20A8854200C8CB72 /* H1Label.swift in Sources */,
+				CFB8827E20AA0DE200489433 /* H3Label.swift in Sources */,
 				CF53CEE720A81F2C00C8CB72 /* StringExtension.swift in Sources */,
 				CF53CE9F20A789B300C8CB72 /* AppDelegate.swift in Sources */,
 			);
