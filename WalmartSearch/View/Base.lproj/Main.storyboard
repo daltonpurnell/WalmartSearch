@@ -312,7 +312,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="467"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8w-W9-6gi">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-KW-eze">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
@@ -402,7 +402,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvj-eX-P70" customClass="P1Label" customModule="WalmartSearch" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="444" width="359" height="148"/>
+                                                <rect key="frame" x="8" y="444" width="359" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -446,6 +446,11 @@
                                             <constraint firstItem="675-r4-cel" firstAttribute="top" secondItem="d9x-d5-34b" secondAttribute="bottom" constant="8" id="xhC-Zc-Ncw"/>
                                             <constraint firstAttribute="bottom" secondItem="wvj-eX-P70" secondAttribute="bottom" constant="8" id="zlW-xs-ofT"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="x1j-7N-oUk"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -473,6 +478,7 @@
                         <outlet property="availableOnlineLabel" destination="Q4d-IK-QJp" id="vJx-3H-fDp"/>
                         <outlet property="collectionView" destination="bVR-ha-fsy" id="2Tg-aW-bOY"/>
                         <outlet property="collectionViewHeightConstraint" destination="iL2-kc-UHL" id="tzh-vO-SZ4"/>
+                        <outlet property="contentView" destination="I8w-W9-6gi" id="kIO-ZS-gZQ"/>
                         <outlet property="descriptionLabel" destination="wvj-eX-P70" id="bSF-po-jfp"/>
                         <outlet property="isTwoDayShippingAvailableLabel" destination="OTK-1o-nAq" id="pua-2p-Kfw"/>
                         <outlet property="itemIdLabel" destination="675-r4-cel" id="ACy-z0-Rdq"/>

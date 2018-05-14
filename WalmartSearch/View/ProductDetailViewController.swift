@@ -23,6 +23,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     
     let webService:WebService = WebService()
     let activityIndicatorManager:ActivityIndicatorManager = ActivityIndicatorManager()
@@ -41,6 +42,8 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
         } else {
             print("No item id")
         }
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     // MARK: - Api Calls
