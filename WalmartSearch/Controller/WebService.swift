@@ -141,7 +141,7 @@ class WebService {
                 let parentItemId: Int? = item["parentItemId"] as? Int
                 let name: String? = item["name"] as? String
                 let salePrice: Double? = item["salePrice"] as? Double
-                let shortDescription: String? = item["shortDescription"] as? String
+                let shortDescription: String? = (item["shortDescription"] as? String)?.htmlToString
                 let thumbnailUrlString: String? = item["thumbnailImage"] as? String
                 let product:Product = Product.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, thumbnailUrlString: thumbnailUrlString)
                 isMappingTrendingResults ? trendingResults.append(product) : searchResults.append(product)
@@ -174,7 +174,7 @@ class WebService {
                 let parentItemId: Int? = item["parentItemId"] as? Int
                 let name: String? = item["name"] as? String
                 let salePrice: Double? = item["salePrice"] as? Double
-                let shortDescription: String? = item["shortDescription"] as? String
+                let shortDescription: String? = (item["shortDescription"] as? String)?.htmlToString
                 let thumbnailUrlString: String? = item["thumbnailImage"] as? String
                 let product:Product = Product.init(itemId: itemId, parentItemId: parentItemId, name: name, salePrice: salePrice, shortDescription: shortDescription, thumbnailUrlString: thumbnailUrlString)
                 recommendationsResults.append(product)
@@ -201,8 +201,8 @@ class WebService {
             let parentItemId: Int? = item["parentItemId"] as? Int
             let name: String? = item["name"] as? String
             let salePrice: Double? = item["salePrice"] as? Double
-            let shortDescription: String? = item["shortDescription"] as? String
-            let longDescription: String? = item["longDescription"] as? String
+            let shortDescription: String? = (item["shortDescription"] as? String)?.htmlToString
+            let longDescription: String? = (item["longDescription"] as? String)?.htmlToString
             let brandName: String? = item["brandName"] as? String
             let thumbnailUrlString: String? = item["thumbnailImage"] as? String
             let mediumImageUrlString: String? = item["mediumImage"] as? String
