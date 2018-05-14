@@ -38,6 +38,9 @@ struct Constants {
         static let walmartBlue:UIColor = UIColor(red: 0.0/255.0, green: 113.0/255.0, blue: 206.0/255.0, alpha: 1)
         static let sparkYellow:UIColor = UIColor(red: 255.0/255.0, green: 194.0/255.0, blue: 32.0/255.0, alpha: 1)
         static let darkBlue:UIColor = UIColor(red: 4.0/255.0, green: 30.0/255.0, blue: 66.0/255.0, alpha: 1)
+        static let marketGreen:UIColor = UIColor(red: 95.0/255.0, green: 180.0/255.0, blue: 70.0/255.0, alpha: 1)
+        static let rollbackRed:UIColor = UIColor(red: 222.0/255.0, green: 28.0/255.0, blue: 36.0/255.0, alpha: 1)
+
         static let lightGray:UIColor = UIColor(red: 211.0/255.0, green: 211.0/255.0, blue: 211.0/255.0, alpha: 1)
     }
 }

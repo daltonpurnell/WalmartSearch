@@ -101,25 +101,36 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             }
             
             if let availableOnline = productDetails.availableOnline {
-                availableOnlineLabel.text = availableOnline ? "Available Online" : "Not Available Online"
+                
+                if availableOnline {
+                    availableOnlineLabel.text = "Available Online"
+                    availableOnlineLabel.textColor = Constants.Colors.marketGreen
+                } else {
+                   availableOnlineLabel.text = "Not Available Online"
+                   availableOnlineLabel.textColor = Constants.Colors.rollbackRed
+                }
             }
             
             if let standardShipRate = productDetails.standardShipRate {
-                standardShipRateLabel.text = "$\(standardShipRate)"
+                standardShipRateLabel.text = "Standard Shipping Rate: $\(standardShipRate)"
             }
             
             if let marketplace = productDetails.marketPlace {
-                marketplaceLabel.text = marketplace ? "Sold by Marketplace Participant" : ""
+                marketplaceLabel.text = marketplace ? "Sold by Marketplace Participant" : "Sold by WalMart"
             }
             
             if let shipToStore = productDetails.shipToStore, let freeShipToStore = productDetails.freeShipToStore {
                 if shipToStore == false {
                     shipToStoreLabel.text = "Ship to Store Not Available"
+                    shipToStoreLabel.textColor = Constants.Colors.rollbackRed
                 } else {
                     if freeShipToStore == true {
                         shipToStoreLabel.text = "FREE Ship to Store"
+                        shipToStoreLabel.textColor = Constants.Colors.marketGreen
+
                     } else {
                         shipToStoreLabel.text = "Ship to Store"
+                        shipToStoreLabel.textColor = Constants.Colors.marketGreen
                     }
                 }
                 
@@ -134,6 +145,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             }
             
             if let description = productDetails.longDescription {
+
                 descriptionLabel.text = description.htmlToString
             }
         }
