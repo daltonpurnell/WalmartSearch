@@ -28,6 +28,7 @@ struct Constants {
     struct Fonts {
         static let h1:UIFont? = UIFont(name: "Bogle-Black", size: 22)
         static let h2:UIFont? = UIFont(name: "Bogle-Bold", size: 18)
+        static let h3:UIFont? = UIFont(name: "Bogle-Bold", size: 14)
         static let p1:UIFont? = UIFont(name: "Bogle-Regular", size: 14)
         static let p2:UIFont? = UIFont(name: "Bogle-Regular", size: 12)
         static let p3:UIFont? = UIFont(name: "Bogle-Regular", size: 10)

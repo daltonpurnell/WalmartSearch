@@ -12,7 +12,6 @@ class CustomRecommendationCell: UICollectionViewCell {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: H2Label!
     @IBOutlet weak var priceLabel: H2Label!
-    @IBOutlet weak var descriptionLabel: P3Label!    
     
     func populateCellWithProduct(product:Product) {
         if let name = product.name {
@@ -21,9 +20,6 @@ class CustomRecommendationCell: UICollectionViewCell {
         
         if let price = product.salePrice {
             priceLabel.text = "$\(price)"
-        }
-        if let description = product.shortDescription {
-            descriptionLabel.text = description.htmlToString
         }
         
         if let imageUrl = product.thumbnailUrlString {
