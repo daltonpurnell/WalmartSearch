@@ -32,6 +32,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.getTrendingProducts()
         setupNavBar()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if #available(iOS 11.0, *) {
+            navigationItem.hidesSearchBarWhenScrolling = false
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if #available(iOS 11.0, *) {
+            navigationItem.hidesSearchBarWhenScrolling = true
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,7 +83,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - UI Methods
     func setupNavBar() {
         if #available(iOS 11.0, *) {
-
             navigationController?.navigationBar.barTintColor = Constants.Colors.walmartBlue
             if let image = UIImage(named: "walmart-logo") {
                 let imageView = UIImageView(image: image)
@@ -77,23 +90,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 navigationItem.titleView = imageView
             }
 
-            let searchController = UISearchController(searchResultsController: nil)
-            navigationItem.hidesSearchBarWhenScrolling = false
+            let searchController = CustomSearchController(searchResultsController: nil)
             navigationItem.searchController = searchController
             searchController.searchBar.delegate = self
-            
-            if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
-                if let backgroundview = textfield.subviews.first {
-                    backgroundview.backgroundColor = UIColor.white
-                    backgroundview.layer.cornerRadius = 10
-                    backgroundview.clipsToBounds = true
-                }
-            }
-            searchController.searchBar.tintColor = UIColor.white
-            searchController.searchBar.setImage(UIImage(named: "clear-icon"), for: UISearchBarIcon.clear, state: .normal)
-            UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: Constants.Colors.darkBlue]
         }
-        
     }
     
     

@@ -25,6 +25,13 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
+    @IBOutlet weak var stockLabelHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var availableOnlineLabelHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var shipRateLabelHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var marketplaceLabelHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var shipToStoreLabelHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var twoDayShippingLabelHeightConstraint: NSLayoutConstraint!
+    
     let webService:WebService = WebService()
     let activityIndicatorManager:ActivityIndicatorManager = ActivityIndicatorManager()
     let collectionViewCellReuseId:String = "cell"
@@ -98,6 +105,8 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             
             if let stock = productDetails.stock {
                 stockLabel.text = "In Stock: \(stock)"
+            } else {
+                stockLabelHeightConstraint.constant = 0.0
             }
             
             if let availableOnline = productDetails.availableOnline {
@@ -109,14 +118,20 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
                    availableOnlineLabel.text = "Not Available Online"
                    availableOnlineLabel.textColor = Constants.Colors.rollbackRed
                 }
+            } else {
+                availableOnlineLabelHeightConstraint.constant = 0.0
             }
             
             if let standardShipRate = productDetails.standardShipRate {
                 standardShipRateLabel.text = "Standard Shipping Rate: $\(standardShipRate)"
+            } else {
+                shipRateLabelHeightConstraint.constant = 0.0
             }
             
             if let marketplace = productDetails.marketPlace {
                 marketplaceLabel.text = marketplace ? "Sold by Marketplace Participant" : "Sold by WalMart"
+            } else {
+                marketplaceLabelHeightConstraint.constant = 0.0
             }
             
             if let shipToStore = productDetails.shipToStore, let freeShipToStore = productDetails.freeShipToStore {
@@ -138,10 +153,18 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
                     let url:URL = URL(string: imageUrl)!
                     productImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder_image"), options: .continueInBackground, completed: nil)
                 }
+            } else {
+                shipToStoreLabelHeightConstraint.constant = 0.0
             }
             
             if let twoDayShipping = productDetails.isTwoDayShippingAvailable {
-                isTwoDayShippingAvailableLabel.text = twoDayShipping ? "Two Day Shipping" : ""
+                if twoDayShipping {
+                    isTwoDayShippingAvailableLabel.text = "Two Day Shipping"
+                } else {
+                    twoDayShippingLabelHeightConstraint.constant = 0.0
+                }
+            } else {
+                twoDayShippingLabelHeightConstraint.constant = 0.0
             }
             
             if let description = productDetails.longDescription {
