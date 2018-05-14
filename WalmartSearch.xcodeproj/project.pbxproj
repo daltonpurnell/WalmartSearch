@@ -180,12 +180,12 @@
 			children = (
 				CF53CEE920A8669000C8CB72 /* SupportingFiles */,
 				CF53CE9E20A789B300C8CB72 /* AppDelegate.swift */,
+				CF53CEE320A8131600C8CB72 /* WalmartSearch-Bridging-Header.h */,
 				CF53CEAA20A789B600C8CB72 /* Info.plist */,
 				CF53CEDD20A796CB00C8CB72 /* Helpers */,
 				CF53CEDE20A796D900C8CB72 /* Controller */,
 				CF53CEE020A7971900C8CB72 /* View */,
 				CF53CEDC20A796B900C8CB72 /* Model */,
-				CF53CEE320A8131600C8CB72 /* WalmartSearch-Bridging-Header.h */,
 			);
 			path = WalmartSearch;
 			sourceTree = "<group>";

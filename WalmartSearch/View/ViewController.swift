@@ -104,9 +104,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let itemId = trendingProducts[indexPath.row].itemId {
-            performSegue(withIdentifier: showTrendingProductDetailsSegueId, sender: self)
+        guard let itemId = trendingProducts[indexPath.row].itemId else {
+            return
         }
+        performSegue(withIdentifier: showTrendingProductDetailsSegueId, sender: self)
     }
     
     // MARK: - Search Bar Delegate Methods
