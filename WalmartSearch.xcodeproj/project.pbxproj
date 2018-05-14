@@ -228,12 +228,6 @@
 			children = (
 				CF53CEDA20A78D9800C8CB72 /* Constants.swift */,
 				CF53CEE620A81F2C00C8CB72 /* StringExtension.swift */,
-				CF53CEF920A8854200C8CB72 /* H1Label.swift */,
-				CF53CEFB20A886D100C8CB72 /* H2Label.swift */,
-				CFB8827D20AA0DE200489433 /* H3Label.swift */,
-				CF53CEFD20A886E400C8CB72 /* P1Label.swift */,
-				CF53CEFF20A886FF00C8CB72 /* P2Label.swift */,
-				CF53CF0120A88A4900C8CB72 /* P3Label.swift */,
 				CFB8827920A9D23200489433 /* ActivityIndicatorManager.swift */,
 				CFB8827B20A9FE2F00489433 /* TableViewHelper.swift */,
 			);
@@ -251,6 +245,12 @@
 		CF53CEDF20A7970000C8CB72 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				CF53CEF920A8854200C8CB72 /* H1Label.swift */,
+				CF53CEFB20A886D100C8CB72 /* H2Label.swift */,
+				CFB8827D20AA0DE200489433 /* H3Label.swift */,
+				CF53CEFD20A886E400C8CB72 /* P1Label.swift */,
+				CF53CEFF20A886FF00C8CB72 /* P2Label.swift */,
+				CF53CF0120A88A4900C8CB72 /* P3Label.swift */,
 				CF53CEE120A79C4300C8CB72 /* CustomSearchResultCell.swift */,
 				CF53CECE20A78A6C00C8CB72 /* CardView.swift */,
 				CF53CED220A78A9900C8CB72 /* CustomRecommendationCell.swift */,
