@@ -39,6 +39,7 @@
 		CFB8827A20A9D23200489433 /* ActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8827920A9D23200489433 /* ActivityIndicatorManager.swift */; };
 		CFB8827C20A9FE2F00489433 /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8827B20A9FE2F00489433 /* TableViewHelper.swift */; };
 		CFB8827E20AA0DE200489433 /* H3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8827D20AA0DE200489433 /* H3Label.swift */; };
+		CFB8828020AA446700489433 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8827F20AA446700489433 /* CustomSearchController.swift */; };
 		FCF4BAFC1A3800F044F81494 /* Pods_WalmartSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1207DCBFFA1CB6CBE43A9E /* Pods_WalmartSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		CFB8827920A9D23200489433 /* ActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorManager.swift; sourceTree = "<group>"; };
 		CFB8827B20A9FE2F00489433 /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		CFB8827D20AA0DE200489433 /* H3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H3Label.swift; sourceTree = "<group>"; };
+		CFB8827F20AA446700489433 /* CustomSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		D36D5C2FB885B2DDB19663C8 /* Pods-WalmartSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalmartSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalmartSearch/Pods-WalmartSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		EF1207DCBFFA1CB6CBE43A9E /* Pods_WalmartSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalmartSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC222B9F1F5A78D4DF97FECB /* Pods_WalmartSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WalmartSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,7 @@
 				CF53CEE120A79C4300C8CB72 /* CustomSearchResultCell.swift */,
 				CF53CECE20A78A6C00C8CB72 /* CardView.swift */,
 				CF53CED220A78A9900C8CB72 /* CustomRecommendationCell.swift */,
+				CFB8827F20AA446700489433 /* CustomSearchController.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB8828020AA446700489433 /* CustomSearchController.swift in Sources */,
 				CF53CECD20A78A5B00C8CB72 /* WebService.swift in Sources */,
 				CF53CED920A78B2700C8CB72 /* ProductDetails.swift in Sources */,
 				CF53CF0020A886FF00C8CB72 /* P2Label.swift in Sources */,
@@ -785,7 +789,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZW8XHLXS82;
 				INFOPLIST_FILE = WalmartSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalton.WalmartSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WalmartSearch/WalmartSearch-Bridging-Header.h";
@@ -804,7 +811,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZW8XHLXS82;
 				INFOPLIST_FILE = WalmartSearch/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalton.WalmartSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WalmartSearch/WalmartSearch-Bridging-Header.h";
@@ -822,7 +832,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZW8XHLXS82;
 				INFOPLIST_FILE = WalmartSearchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalton.WalmartSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -840,7 +854,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZW8XHLXS82;
 				INFOPLIST_FILE = WalmartSearchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalton.WalmartSearchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -857,7 +875,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZW8XHLXS82;
 				INFOPLIST_FILE = WalmartSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalton.WalmartSearchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -874,7 +896,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZW8XHLXS82;
 				INFOPLIST_FILE = WalmartSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dalton.WalmartSearchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
