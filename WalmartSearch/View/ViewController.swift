@@ -44,6 +44,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return searchResults.count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if searchResults.count > 0 {
+            return 1
+        } else {
+            TableViewHelper.EmptyMessage(message:"No search results to display", tableView: tableView)
+            return 0
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:CustomSearchResultCell = tableView.dequeueReusableCell(withIdentifier: tableViewCellReuseId, for: indexPath) as! CustomSearchResultCell
         
