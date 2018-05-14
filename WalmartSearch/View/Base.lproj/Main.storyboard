@@ -103,13 +103,13 @@
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WvO-F7-3Wz">
                                     <size key="itemSize" width="331" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ljm-ea-fNk" customClass="CustomRecommendationCell" customModule="WalmartSearch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="128"/>
+                                        <rect key="frame" x="50" y="0.0" width="331" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="331" height="128"/>
@@ -165,6 +165,21 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="collectionViewHeader" id="48U-x1-jXp">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trending" translatesAutoresizingMaskIntoConstraints="NO" id="taE-Ls-yk3">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="taE-Ls-yk3" firstAttribute="leading" secondItem="48U-x1-jXp" secondAttribute="leading" id="4aE-au-JyC"/>
+                                        <constraint firstItem="taE-Ls-yk3" firstAttribute="top" secondItem="48U-x1-jXp" secondAttribute="top" id="ZS3-gU-QQt"/>
+                                        <constraint firstAttribute="trailing" secondItem="taE-Ls-yk3" secondAttribute="trailing" id="dDh-cu-hFQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="taE-Ls-yk3" secondAttribute="bottom" id="vET-Sq-ZZV"/>
+                                    </constraints>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="4dK-UG-vaT"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pTS-51-EcJ"/>
@@ -211,13 +226,13 @@
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Hb-yy-Wlf">
                                     <size key="itemSize" width="331" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="J7E-q0-Rf9" customClass="CustomRecommendationCell" customModule="WalmartSearch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="128"/>
+                                        <rect key="frame" x="50" y="0.0" width="331" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="331" height="128"/>
@@ -273,6 +288,21 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="collectionViewHeader" id="iz9-Wb-CcM">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="related" translatesAutoresizingMaskIntoConstraints="NO" id="NGs-gy-nDv">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="NGs-gy-nDv" secondAttribute="trailing" id="5qC-bN-FWf"/>
+                                        <constraint firstAttribute="bottom" secondItem="NGs-gy-nDv" secondAttribute="bottom" id="Atq-r1-JW3"/>
+                                        <constraint firstItem="NGs-gy-nDv" firstAttribute="leading" secondItem="iz9-Wb-CcM" secondAttribute="leading" id="Oah-2X-gnw"/>
+                                        <constraint firstItem="NGs-gy-nDv" firstAttribute="top" secondItem="iz9-Wb-CcM" secondAttribute="top" id="mfi-vS-ZhA"/>
+                                    </constraints>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="tlJ-N9-1EO" id="sbd-o7-9d7"/>
                                     <outlet property="delegate" destination="tlJ-N9-1EO" id="nHB-I7-Hj8"/>
@@ -457,7 +487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugP-xG-nZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846" y="189"/>
+            <point key="canvasLocation" x="1845.5999999999999" y="188.45577211394306"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sMN-jv-Uhg">
@@ -478,6 +508,10 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="related" width="50" height="128"/>
+        <image name="trending" width="50" height="128"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KUb-ar-tou"/>
     </inferredMetricsTieBreakers>
