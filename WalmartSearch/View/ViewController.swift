@@ -104,7 +104,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let itemId = trendingProducts[indexPath.row].itemId else {
+        guard trendingProducts[indexPath.row].itemId != nil else {
             return
         }
         performSegue(withIdentifier: showTrendingProductDetailsSegueId, sender: self)
