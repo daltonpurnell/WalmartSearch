@@ -25,6 +25,8 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     
     let webService:WebService = WebService()
     let collectionViewCellReuseId:String = "cell"
+    let collectionViewHeaderReuseId:String = "collectionViewHeader"
+
     
     var selectedProductId:Int?
     var productDetails:ProductDetails?
@@ -134,6 +136,11 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     // MARK: - CollectionView Delegate & DataSource Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recommendations.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: collectionViewHeaderReuseId, for: indexPath as IndexPath)
+        return headerView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

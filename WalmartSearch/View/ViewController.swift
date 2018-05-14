@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let collectionViewCellReuseId:String = "cell"
     let showSearchResultDetailsSegueId:String = "showSearchDetailVC"
     let showTrendingProductDetailsSegueId:String = "showTrendingDetailVC"
+    let collectionViewHeaderReuseId:String = "collectionViewHeader"
 
     
     
@@ -88,6 +89,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - CollectionView Delegate & DataSource Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return trendingProducts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: collectionViewHeaderReuseId, for: indexPath as IndexPath)
+        return headerView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
