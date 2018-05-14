@@ -298,7 +298,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="467"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8w-W9-6gi">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="431"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="460"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-KW-eze">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
@@ -392,8 +392,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIB-Wb-sSc" customClass="H2Label" customModule="WalmartSearch" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="423" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvj-eX-P70" customClass="P1Label" customModule="WalmartSearch" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="423" width="359" height="0.0"/>
+                                                <rect key="frame" x="8" y="452" width="359" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -406,22 +412,25 @@
                                             <constraint firstAttribute="trailing" secondItem="9UR-uj-ugR" secondAttribute="trailing" constant="8" id="5pa-0J-sk4"/>
                                             <constraint firstItem="d9x-d5-34b" firstAttribute="leading" secondItem="I8w-W9-6gi" secondAttribute="leading" constant="8" id="9DN-Jk-hKJ"/>
                                             <constraint firstAttribute="trailing" secondItem="wvj-eX-P70" secondAttribute="trailing" constant="8" id="9Vy-rD-Pg4"/>
+                                            <constraint firstItem="wvj-eX-P70" firstAttribute="top" secondItem="bIB-Wb-sSc" secondAttribute="bottom" constant="8" id="CSS-uP-tD7"/>
                                             <constraint firstItem="9UR-uj-ugR" firstAttribute="top" secondItem="675-r4-cel" secondAttribute="bottom" constant="8" id="E6j-Oz-Hvh"/>
                                             <constraint firstAttribute="trailing" secondItem="d9x-d5-34b" secondAttribute="trailing" constant="8" id="Hox-SO-d2h"/>
+                                            <constraint firstAttribute="trailing" secondItem="bIB-Wb-sSc" secondAttribute="trailing" constant="8" id="HzW-As-1qZ"/>
                                             <constraint firstItem="wvj-eX-P70" firstAttribute="leading" secondItem="I8w-W9-6gi" secondAttribute="leading" constant="8" id="J26-j7-9IF"/>
                                             <constraint firstItem="Brf-Zd-OnP" firstAttribute="leading" secondItem="I8w-W9-6gi" secondAttribute="leading" constant="8" id="Kh7-ce-eSd"/>
                                             <constraint firstAttribute="trailing" secondItem="Mz8-to-4o4" secondAttribute="trailing" constant="8" id="Kp7-tt-zAu"/>
+                                            <constraint firstItem="bIB-Wb-sSc" firstAttribute="leading" secondItem="I8w-W9-6gi" secondAttribute="leading" constant="8" id="Opm-dw-Jb8"/>
                                             <constraint firstItem="Jcq-wV-WEr" firstAttribute="leading" secondItem="I8w-W9-6gi" secondAttribute="leading" constant="8" id="Pl5-Zu-whZ"/>
                                             <constraint firstItem="Q4d-IK-QJp" firstAttribute="leading" secondItem="I8w-W9-6gi" secondAttribute="leading" constant="8" id="UAt-iR-8cq"/>
                                             <constraint firstAttribute="trailing" secondItem="tfe-KW-eze" secondAttribute="trailing" id="Y9b-gw-JXM"/>
                                             <constraint firstAttribute="trailing" secondItem="675-r4-cel" secondAttribute="trailing" constant="8" id="ZIF-a8-hZv"/>
                                             <constraint firstItem="d9x-d5-34b" firstAttribute="top" secondItem="Jcq-wV-WEr" secondAttribute="bottom" constant="8" id="aJV-Og-PD5"/>
+                                            <constraint firstItem="bIB-Wb-sSc" firstAttribute="top" secondItem="OTK-1o-nAq" secondAttribute="bottom" constant="8" id="agt-VT-z8V"/>
                                             <constraint firstItem="Q4d-IK-QJp" firstAttribute="top" secondItem="9UR-uj-ugR" secondAttribute="bottom" constant="8" id="b3e-SH-oG1"/>
                                             <constraint firstItem="vUN-Eh-soS" firstAttribute="leading" secondItem="I8w-W9-6gi" secondAttribute="leading" constant="8" id="c3U-Vs-hCG"/>
                                             <constraint firstItem="Mz8-to-4o4" firstAttribute="top" secondItem="vUN-Eh-soS" secondAttribute="bottom" constant="8" id="cC8-Rx-VmK"/>
                                             <constraint firstAttribute="trailing" secondItem="Brf-Zd-OnP" secondAttribute="trailing" constant="8" id="eNl-iM-cn9"/>
                                             <constraint firstItem="Brf-Zd-OnP" firstAttribute="top" secondItem="Mz8-to-4o4" secondAttribute="bottom" constant="8" id="fA8-tR-aXy"/>
-                                            <constraint firstItem="wvj-eX-P70" firstAttribute="top" secondItem="OTK-1o-nAq" secondAttribute="bottom" constant="8" id="j2e-NZ-WWe"/>
                                             <constraint firstAttribute="trailing" secondItem="Q4d-IK-QJp" secondAttribute="trailing" constant="8" id="jJh-1u-6U4"/>
                                             <constraint firstItem="vUN-Eh-soS" firstAttribute="top" secondItem="Q4d-IK-QJp" secondAttribute="bottom" constant="8" id="keW-kd-yaj"/>
                                             <constraint firstItem="9UR-uj-ugR" firstAttribute="leading" secondItem="I8w-W9-6gi" secondAttribute="leading" constant="8" id="mWk-aw-Jgh"/>
@@ -476,6 +485,7 @@
                     </view>
                     <connections>
                         <outlet property="availableOnlineLabel" destination="Q4d-IK-QJp" id="vJx-3H-fDp"/>
+                        <outlet property="availableOnlineLabelHeightConstraint" destination="ZNx-cb-gnu" id="WDd-Dh-4fv"/>
                         <outlet property="collectionView" destination="bVR-ha-fsy" id="2Tg-aW-bOY"/>
                         <outlet property="collectionViewHeightConstraint" destination="iL2-kc-UHL" id="tzh-vO-SZ4"/>
                         <outlet property="contentView" destination="I8w-W9-6gi" id="kIO-ZS-gZQ"/>
@@ -483,13 +493,18 @@
                         <outlet property="isTwoDayShippingAvailableLabel" destination="OTK-1o-nAq" id="pua-2p-Kfw"/>
                         <outlet property="itemIdLabel" destination="675-r4-cel" id="ACy-z0-Rdq"/>
                         <outlet property="marketplaceLabel" destination="Mz8-to-4o4" id="hYT-hc-64P"/>
+                        <outlet property="marketplaceLabelHeightConstraint" destination="iNj-by-IXg" id="TsW-Wf-cuH"/>
                         <outlet property="nameLabel" destination="Jcq-wV-WEr" id="UNO-EA-bQb"/>
                         <outlet property="priceLabel" destination="d9x-d5-34b" id="oAg-EI-v01"/>
                         <outlet property="productImageView" destination="tfe-KW-eze" id="qaI-tE-K4p"/>
                         <outlet property="scrollView" destination="DKq-Ig-ctW" id="ydI-Uc-yeQ"/>
+                        <outlet property="shipRateLabelHeightConstraint" destination="nGe-oq-Wee" id="5pv-5T-ruF"/>
                         <outlet property="shipToStoreLabel" destination="Brf-Zd-OnP" id="zJM-H2-Gl3"/>
+                        <outlet property="shipToStoreLabelHeightConstraint" destination="uMO-aE-9H3" id="xEr-GK-qUy"/>
                         <outlet property="standardShipRateLabel" destination="vUN-Eh-soS" id="dt2-eM-eJg"/>
                         <outlet property="stockLabel" destination="9UR-uj-ugR" id="mUl-Vc-vTw"/>
+                        <outlet property="stockLabelHeightConstraint" destination="CZt-yS-cYN" id="hQ2-2a-ZDb"/>
+                        <outlet property="twoDayShippingLabelHeightConstraint" destination="c3S-yg-nQq" id="o1E-32-VhD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugP-xG-nZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
