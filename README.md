@@ -31,7 +31,7 @@
 - I am new to writing tests, but I did experiment with tests for the app
 
 - For Unit Tests
-    - Open the WalmartSearchUnitTests.swift file in the WalmartSearchUnitTests target
+    - Open the WalmartSearchTests.swift file in the WalmartSearchTests target
     - Click the play icon next to the class declaration
     
 - For UI Tests
