@@ -9,6 +9,8 @@
 import XCTest
 
 class WalmartSearchUITests: XCTestCase {
+    let app = XCUIApplication()
+
         
     override func setUp() {
         super.setUp()
@@ -28,9 +30,29 @@ class WalmartSearchUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testSearchBarText() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let searchSearchField = app.searchFields["Search"]
+
+        searchSearchField.tap()
+
+        let textToType = "Thing"
+
+        for c in textToType {
+            searchSearchField.typeText("\(c)")
+        }
+        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+
+        let searchBarText = searchSearchField.value as! String
+
+        XCTAssertEqual(searchBarText, "Thing")
+    }
+    
+    func testTableViewEmptyState() {
+        let tableView = app.tables["No search results to display"].staticTexts["No search results to display"]
+        
+        XCTAssertEqual(tableView.cells.count, 0)
     }
     
 }
