@@ -31,8 +31,6 @@ class WalmartSearchTests: XCTestCase {
     
     // MARK: - Helpers Tests
     func testHtmlToStringOutput() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
         let htmlString:String = "<a>This is a string</a>"
         let regularString:String = htmlString.htmlToString
         XCTAssertEqual(regularString, "This is a string")
@@ -42,8 +40,13 @@ class WalmartSearchTests: XCTestCase {
         let view:UIView = UIView()
         let activityIndicatorManager:ActivityIndicatorManager = ActivityIndicatorManager()
         let activityIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: view)
-        
         XCTAssertEqual(activityIndicator.superview, view)
+    }
+    
+    func testNumberHelperOutput() {
+        let doubleToFormat:Double = 50.0
+        let formattedString:String = NumberHelpter.formatDouble(double: doubleToFormat)
+        XCTAssertEqual(formattedString, "50.00")
     }
     
     func testFontConstantValue() {
