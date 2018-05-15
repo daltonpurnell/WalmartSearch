@@ -96,7 +96,8 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             }
             
             if let price = productDetails.salePrice {
-                priceLabel.text = "$\(price)"
+                let formattedPrice:String = NumberHelpter.formatDouble(double: price)
+                priceLabel.text = "$\(formattedPrice)"
             }
             
             if let itemId = productDetails.itemId {
@@ -123,7 +124,8 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             }
             
             if let standardShipRate = productDetails.standardShipRate {
-                standardShipRateLabel.text = "Standard Shipping Rate: $\(standardShipRate)"
+                let formattedRate:String = NumberHelpter.formatDouble(double: standardShipRate)
+                standardShipRateLabel.text = "Standard Shipping Rate: $\(formattedRate)"
             } else {
                 shipRateLabelHeightConstraint.constant = 0.0
             }
