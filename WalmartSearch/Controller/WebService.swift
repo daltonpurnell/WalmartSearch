@@ -51,7 +51,7 @@ class WebService {
         dataTask?.cancel()
         if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
             urlComponents.path = Constants.Paths.recommendationsPath
-            urlComponents.query = "apiKey=\(Constants.Keys.walmartOpenApiKey)&itemId=\(itemId)&order=asc"
+            urlComponents.query = "apiKey=\(Constants.Keys.walmartOpenApiKey)&itemId=\(itemId)"
             guard let url = urlComponents.url else {
                 return
             }
