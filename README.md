@@ -21,14 +21,20 @@
 
 ## To Run the App
 
-- Clone the iOS repository locally
+- Clone the iOS repository
 - Open the WalmartSearch.xcworkspace file in XCode
 - Run in simulator
 
 
 ## To Run the Tests
 
-- I am new to writing tests, but I did write a couple UI tests for the app
-- Open the WalmartSearchUITests.swift file in the WalmartSearchUITests target
-- Click the play icon next to the class declaration
+- I am new to writing tests, but I did experiment with tests for the app
+
+- For Unit Tests
+    - Open the WalmartSearchUnitTests.swift file in the WalmartSearchUnitTests target
+    - Click the play icon next to the class declaration
+    
+- For UI Tests
+    - Open the WalmartSearchUITests.swift file in the WalmartSearchUITests target
+    - Click the play icon next to the class declaration
 
