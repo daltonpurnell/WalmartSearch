@@ -92,6 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
             let searchController = CustomSearchController(searchResultsController: nil)
             navigationItem.searchController = searchController
+            navigationController?.navigationBar.tintColor = UIColor.white
             searchController.searchBar.delegate = self
         }
     }
