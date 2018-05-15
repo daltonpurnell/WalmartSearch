@@ -76,12 +76,12 @@ class WalmartSearchTests: XCTestCase {
     
     func testRecommendationsUrl() {
         let path = Constants.Paths.recommendationsPath
-        let query = "apiKey=\(key)&itemId=\(itemId)&order=asc"
+        let query = "apiKey=\(key)&itemId=\(itemId)"
         var urlComponents = URLComponents(string: baseUrl)
         urlComponents?.path = path
         urlComponents?.query = query
         
-        XCTAssertEqual(urlComponents?.url, URL(string:"http://api.walmartlabs.com/v1/nbp?apiKey=b68mqfez5xhjrqyf9ytv4z96&itemId=123&order=asc"))
+        XCTAssertEqual(urlComponents?.url, URL(string:"http://api.walmartlabs.com/v1/nbp?apiKey=b68mqfez5xhjrqyf9ytv4z96&itemId=123"))
     }
     
     func testTrendingUrl() {
