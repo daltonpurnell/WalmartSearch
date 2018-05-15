@@ -44,9 +44,9 @@ class WalmartSearchTests: XCTestCase {
     }
     
     func testNumberHelperOutput() {
-        let doubleToFormat:Double = 50.0
+        let doubleToFormat:Double = 0.0
         let formattedString:String = NumberHelpter.formatDouble(double: doubleToFormat)
-        XCTAssertEqual(formattedString, "50.00")
+        XCTAssertEqual(formattedString, "0.00")
     }
     
     func testFontConstantValue() {

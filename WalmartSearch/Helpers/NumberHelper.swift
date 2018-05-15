@@ -16,7 +16,11 @@ class NumberHelpter {
         formatter.maximumFractionDigits = 2
         
         let number:NSNumber = NSNumber(floatLiteral: double)
-        return formatter.string(from: number)!
+        var numberString:String = formatter.string(from: number)!
+        if numberString.starts(with: ".") {
+            numberString = "0\(numberString)"
+        }
+        return numberString
     }
 }
 
