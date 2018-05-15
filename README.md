@@ -37,8 +37,4 @@
 - For UI Tests
     - Open the WalmartSearchUITests.swift file in the WalmartSearchUITests target
     - Click the play icon next to the class declaration
-    
-- To View Memory Leak Check Trace
-    - In Xcode, navigate to Developer Tool -> Instruments and open
-    - In Instruments, click "Open Existing File" and navigate to WalMartSearchTests -> InstrumentsMemoryLeackCheck.trace and open (you may need to zoom in a bit on the timeline to view all of the snapshots)
 
