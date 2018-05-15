@@ -23,7 +23,8 @@ class CustomSearchResultCell:UITableViewCell {
         }
         
         if let price = product.salePrice {
-            priceLabel.text = "$\(price)"
+            let formattedPrice:String = NumberHelpter.formatDouble(double: price)
+            priceLabel.text = "$\(formattedPrice)"
         }
         if let description = product.shortDescription {
             descriptionLabel.text = description.htmlToString

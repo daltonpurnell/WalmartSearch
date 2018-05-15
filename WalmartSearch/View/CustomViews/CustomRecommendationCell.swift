@@ -19,7 +19,8 @@ class CustomRecommendationCell: UICollectionViewCell {
         }
         
         if let price = product.salePrice {
-            priceLabel.text = "$\(price)"
+            let formattedPrice:String = NumberHelpter.formatDouble(double: price)
+            priceLabel.text = "$\(formattedPrice)"
         }
         
         if let imageUrl = product.thumbnailUrlString {
