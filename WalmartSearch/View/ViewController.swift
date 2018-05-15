@@ -138,6 +138,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let results = results {
                 self.searchResults = results
                 self.tableView.reloadData()
+                self.tableView.setContentOffset(.zero, animated: true)
+
             }
             if !errorMessage.isEmpty {
                 print("Search error: " + errorMessage)
@@ -152,6 +154,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let results = results {
                 self.trendingProducts = results
                 self.trendingProductsCollectionView.reloadData()
+                self.trendingProductsCollectionView.setContentOffset(.zero, animated: true)
             }
             if !errorMessage.isEmpty {
                 print("Trending products error: " + errorMessage)

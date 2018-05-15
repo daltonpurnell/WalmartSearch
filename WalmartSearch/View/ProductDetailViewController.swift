@@ -69,12 +69,12 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     }
     
     func getRecommendationsFor(itemId: Int, loadingIndicator:UIActivityIndicatorView) {
-//        let loadingIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: self.collectionView)
         webService.getRecommendations(itemId: itemId) { (recommendationsArray, errorMessage) in
             if let recs = recommendationsArray {
                 self.recommendations = recs
                 self.collectionView.reloadData()
                 self.collectionViewHeightConstraint.constant = 128.0
+                self.collectionView.setContentOffset(.zero, animated: true)
             }
             if !errorMessage.isEmpty {
                 print("Recommendations error: " + errorMessage)
