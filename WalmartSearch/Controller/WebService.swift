@@ -171,7 +171,6 @@ class WebService {
     
     fileprivate func mapRecommendationsResponse(_ data: Data) {
         var response: [JSONDictionary]?
-        var errorDict: JSONDictionary?
         recommendationsResults.removeAll()
         
         do {
@@ -182,22 +181,7 @@ class WebService {
         }
         
         guard let array = response else {
-                do {
-                    errorDict = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
-                } catch let parseError as NSError {
-                    errorMessage += "JSONSerialization error: \(parseError.localizedDescription)\n"
-                    return
-                }
-            
-            if let errorItem = errorDict, let errorArray:[Any] = errorItem["errors"] as? [Any] {
-                let errorObj:JSONDictionary = errorArray.first as! JSONDictionary
-                let code:Int = errorObj["code"] as! Int
-                let message:String = errorObj["message"] as! String
-                errorMessage = "\(code) : \(message)\n"
-                
-            } else {
-                errorMessage += "Error parsing response\n"
-            }
+            errorMessage += "Response is not an array\n"
             return
         }
         
