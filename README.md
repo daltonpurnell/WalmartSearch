@@ -23,7 +23,7 @@
 
 - Clone the iOS repository
 - Open the WalmartSearch.xcworkspace file in XCode
-- Run in simulator
+- Run on simulator or connected device
 
 
 ## To Run the Tests
