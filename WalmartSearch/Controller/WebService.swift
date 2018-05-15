@@ -9,6 +9,11 @@
 import Foundation
 
 class WebService {
+
+    
+    static let sharedInstance = WebService()
+    
+    private init() {}
     
     typealias JSONDictionary = [String: Any]
     typealias ProductResult = ([Product]?, String) -> ()

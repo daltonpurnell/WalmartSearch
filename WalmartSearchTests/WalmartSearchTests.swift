@@ -12,7 +12,6 @@ import XCTest
 
 class WalmartSearchTests: XCTestCase {
     
-    let webService:WebService = WebService()
     let baseUrl:String = Constants.Urls.baseUrl
     let key = Constants.Keys.walmartOpenApiKey
     let itemId = 123
@@ -98,7 +97,7 @@ class WalmartSearchTests: XCTestCase {
     // MARK: - WebService Async Callback Tests
     func testWebServiceGetSearchResultsAsyncCallback() {
         let expectation = XCTestExpectation(description: "WebService gets search results and runs the callback closure")
-        webService.getSearchResults(searchTerm: searchTerm) { (searchResults, errorMessage) in
+        WebService.sharedInstance.getSearchResults(searchTerm: searchTerm) { (searchResults, errorMessage) in
             XCTAssertNotNil(searchResults)
             expectation.fulfill()
         }
@@ -107,7 +106,7 @@ class WalmartSearchTests: XCTestCase {
     
     func testWebServiceGetRecommendationsAsyncCallback() {
         let expectation = XCTestExpectation(description: "WebService gets recommendations for item id and runs the callback closure")
-        webService.getRecommendations(itemId:itemId) { (recommendations, errorMessage) in
+         WebService.sharedInstance.getRecommendations(itemId:itemId) { (recommendations, errorMessage) in
             XCTAssertNotNil(recommendations)
             expectation.fulfill()
         }
@@ -116,7 +115,7 @@ class WalmartSearchTests: XCTestCase {
     
     func testWebServiceGetTrendingItemsAsyncCallback() {
         let expectation = XCTestExpectation(description: "WebService gets trending items and runs the callback closure")
-        webService.getTrendingProducts { (trendingItems, errorMessage) in
+        WebService.sharedInstance.getTrendingProducts { (trendingItems, errorMessage) in
             XCTAssertNotNil(trendingItems)
             expectation.fulfill()
         }
@@ -127,7 +126,7 @@ class WalmartSearchTests: XCTestCase {
     // MARK: - Performance
     func testTrendingAsyncCallbackPerformance() {
         self.measure {
-            webService.getTrendingProducts { (trendingItems, errorMessage) in
+            WebService.sharedInstance.getTrendingProducts { (trendingItems, errorMessage) in
                 XCTAssertNotNil(trendingItems)
             }
         }
@@ -135,7 +134,7 @@ class WalmartSearchTests: XCTestCase {
     
     func testSearchAsyncCallbackPerformance() {
         self.measure {
-            webService.getSearchResults(searchTerm: searchTerm ) { (searchResults, errorMessage) in
+            WebService.sharedInstance.getSearchResults(searchTerm: searchTerm ) { (searchResults, errorMessage) in
                 XCTAssertNotNil(searchResults)
             }
         }
@@ -143,7 +142,7 @@ class WalmartSearchTests: XCTestCase {
     
     func testDetailsAsyncCallbackPerformance() {
         self.measure {
-            webService.getProductDetails(itemId: itemId) { (productDetails, errorMessage) in
+            WebService.sharedInstance.getProductDetails(itemId: itemId) { (productDetails, errorMessage) in
                 XCTAssertNotNil(productDetails)
             }
         }
@@ -151,7 +150,7 @@ class WalmartSearchTests: XCTestCase {
     
     func testRecommendationsAsyncCallbackPerformance() {
         self.measure {
-            webService.getRecommendations(itemId: itemId) { (recommendations, errorMessage) in
+            WebService.sharedInstance.getRecommendations(itemId: itemId) { (recommendations, errorMessage) in
                 XCTAssertNotNil(recommendations)
             }
         }

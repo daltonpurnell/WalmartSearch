@@ -20,7 +20,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     
-    let webService:WebService = WebService()
     let activityIndicatorManager:ActivityIndicatorManager = ActivityIndicatorManager()
     var searchResults:[Product] = []
     var trendingProducts:[Product] = []
@@ -134,7 +133,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - Api Calls
     func getSearchResults(searchTerm:String) {
         let loadingIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: self.view)
-        webService.getSearchResults(searchTerm: searchTerm) { (results, errorMessage) in
+        WebService.sharedInstance.getSearchResults(searchTerm: searchTerm) { (results, errorMessage) in
             if let results = results {
                 self.searchResults = results
                 self.tableView.reloadData()
@@ -150,7 +149,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func getTrendingProducts() {
         let loadingIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: self.view)
-        webService.getTrendingProducts { (results, errorMessage) in
+        WebService.sharedInstance.getTrendingProducts { (results, errorMessage) in
             if let results = results {
                 self.trendingProducts = results
                 self.trendingProductsCollectionView.reloadData()

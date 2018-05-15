@@ -32,7 +32,6 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     @IBOutlet weak var shipToStoreLabelHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var twoDayShippingLabelHeightConstraint: NSLayoutConstraint!
     
-    let webService:WebService = WebService()
     let activityIndicatorManager:ActivityIndicatorManager = ActivityIndicatorManager()
     let collectionViewCellReuseId:String = "cell"
     let collectionViewHeaderReuseId:String = "collectionViewHeader"
@@ -56,7 +55,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     // MARK: - Api Calls
     func getProductDetailsFor(itemId: Int) {
         let loadingIndicator:UIActivityIndicatorView = activityIndicatorManager.showLoadingIndicator(view: self.view)
-        webService.getProductDetails(itemId: itemId) { (productDetailsObject, errorMessage) in
+        WebService.sharedInstance.getProductDetails(itemId: itemId) { (productDetailsObject, errorMessage) in
             if let productDetailsObj = productDetailsObject {
                 self.productDetails = productDetailsObj
                 self.populateViewWithProductDetails()
@@ -69,7 +68,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
     }
     
     func getRecommendationsFor(itemId: Int, loadingIndicator:UIActivityIndicatorView) {
-        webService.getRecommendations(itemId: itemId) { (recommendationsArray, errorMessage) in
+        WebService.sharedInstance.getRecommendations(itemId: itemId) { (recommendationsArray, errorMessage) in
             if let recs = recommendationsArray {
                 self.recommendations = recs
                 self.collectionView.reloadData()
