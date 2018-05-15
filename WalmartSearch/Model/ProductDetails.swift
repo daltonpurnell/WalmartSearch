@@ -20,7 +20,7 @@ class ProductDetails {
     let thumbnailUrlString: String?
     let mediumImageUrlString: String?
     let largeImage: String?
-    let standardShipRate: Float?
+    let standardShipRate: Double?
     let size: String?
     let color: String?
     let marketPlace: Bool?
@@ -32,7 +32,7 @@ class ProductDetails {
     let isTwoDayShippingAvailable: Bool?
     let availableOnline: Bool?
     
-    init(itemId: Int?, parentItemId: Int?, name: String?, salePrice: Double?, shortDescription: String?, longDescription: String?, brandName: String?, thumbnailUrlString: String?, mediumImageUrlString: String?, largeImage: String?, standardShipRate: Float?, size: String?, color: String?, marketPlace: Bool?, shipToStore: Bool?, freeShipToStore: Bool?, modelNumber: String?, stock: String?, offerType: String?, isTwoDayShippingAvailable: Bool?, availableOnline: Bool?) {
+    init(itemId: Int?, parentItemId: Int?, name: String?, salePrice: Double?, shortDescription: String?, longDescription: String?, brandName: String?, thumbnailUrlString: String?, mediumImageUrlString: String?, largeImage: String?, standardShipRate: Double?, size: String?, color: String?, marketPlace: Bool?, shipToStore: Bool?, freeShipToStore: Bool?, modelNumber: String?, stock: String?, offerType: String?, isTwoDayShippingAvailable: Bool?, availableOnline: Bool?) {
         self.itemId = itemId
         self.parentItemId = parentItemId
         self.name = name

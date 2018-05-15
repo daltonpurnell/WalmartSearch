@@ -124,7 +124,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             }
             
             if let standardShipRate = productDetails.standardShipRate {
-                let formattedRate:String = NumberHelpter.formatDouble(double: Double(standardShipRate))
+                let formattedRate:String = NumberHelpter.formatDouble(double: standardShipRate)
                 standardShipRateLabel.text = "Standard Shipping Rate: $\(formattedRate)"
             } else {
                 shipRateLabelHeightConstraint.constant = 0.0

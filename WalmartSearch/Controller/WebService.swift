@@ -207,7 +207,7 @@ class WebService {
             let thumbnailUrlString: String? = item["thumbnailImage"] as? String
             let mediumImageUrlString: String? = item["mediumImage"] as? String
             let largeImage: String? = item["largeImage"] as? String
-            let standardShipRate: Float? = item["standardShipRate"] as? Float
+            let standardShipRate: Double? = item["standardShipRate"] as? Double
             let size: String? = item["size"] as? String
             let color: String? = item["color"] as? String
             let marketPlace: Bool? = item["marketplace"] as? Bool
