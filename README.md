@@ -40,5 +40,5 @@
     
 - To View Memory Leak Check Trace
     - In Xcode, navigate to Developer Tool -> Instruments and open
-    - In Instruments, click "Open Existing File" and navigate to WalMartSearchTests -> InstrumentsMemoryLeackCheck.trace and open (you may need to zoom in a bit on the timeline to view all of the snapshots)
+    - In Instruments, click "Open Existing File" and navigate to WalMartSearchTests -> InstrumentsMemoryLeakCheck.trace and open (you may need to zoom in a bit on the timeline to view all of the snapshots)
 
