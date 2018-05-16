@@ -30,6 +30,7 @@ class WebService {
     
     func getSearchResults(searchTerm: String, completion: @escaping ProductResult) {
         dataTask?.cancel()
+        self.errorMessage = ""
         if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
             urlComponents.path = Constants.Paths.searchPath
             urlComponents.query = "apiKey=\(Constants.Keys.walmartOpenApiKey)&query=\(searchTerm)&sort=price&order=asc"
@@ -57,6 +58,7 @@ class WebService {
     
     func getRecommendations(itemId: Int, completion: @escaping ProductResult) {
         dataTask?.cancel()
+        self.errorMessage = ""
         if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
             urlComponents.path = Constants.Paths.recommendationsPath
             urlComponents.query = "apiKey=\(Constants.Keys.walmartOpenApiKey)&itemId=\(itemId)"
@@ -84,6 +86,7 @@ class WebService {
     
     func getTrendingProducts(completion: @escaping ProductResult) {
         dataTask?.cancel()
+        self.errorMessage = ""
         if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
             urlComponents.path = Constants.Paths.trendingPath
             urlComponents.query = "apiKey=\(Constants.Keys.walmartOpenApiKey)"
@@ -111,6 +114,7 @@ class WebService {
     
     func getProductDetails(itemId: Int, completion: @escaping ProductDetailsResult) {
         dataTask?.cancel()
+        self.errorMessage = ""
         if var urlComponents = URLComponents(string: Constants.Urls.baseUrl) {
             urlComponents.path = "\(Constants.Paths.lookupPath)/\(itemId)"
             urlComponents.query = "apiKey=\(Constants.Keys.walmartOpenApiKey)"
