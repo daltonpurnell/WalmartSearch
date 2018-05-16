@@ -10,7 +10,7 @@
 		2BA0AE793A9C249A70F3478F /* Pods_WalmartSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16863C32DB46A9627C1CABED /* Pods_WalmartSearchUITests.framework */; };
 		45E67002D526E783F9DF85A3 /* Pods_WalmartSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC222B9F1F5A78D4DF97FECB /* Pods_WalmartSearch.framework */; };
 		CF53CE9F20A789B300C8CB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53CE9E20A789B300C8CB72 /* AppDelegate.swift */; };
-		CF53CEA120A789B300C8CB72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53CEA020A789B300C8CB72 /* ViewController.swift */; };
+		CF53CEA120A789B300C8CB72 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53CEA020A789B300C8CB72 /* SearchViewController.swift */; };
 		CF53CEA420A789B300C8CB72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEA220A789B300C8CB72 /* Main.storyboard */; };
 		CF53CEA620A789B600C8CB72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEA520A789B600C8CB72 /* Assets.xcassets */; };
 		CF53CEA920A789B600C8CB72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF53CEA720A789B600C8CB72 /* LaunchScreen.storyboard */; };
@@ -69,7 +69,7 @@
 		B94BAAF8567F13A4129B85DB /* Pods-WalmartSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalmartSearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalmartSearchUITests/Pods-WalmartSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CF53CE9B20A789B300C8CB72 /* WalmartSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalmartSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF53CE9E20A789B300C8CB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF53CEA020A789B300C8CB72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF53CEA020A789B300C8CB72 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CF53CEA320A789B300C8CB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF53CEA520A789B600C8CB72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF53CEA820A789B600C8CB72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				CF53CEDF20A7970000C8CB72 /* CustomViews */,
-				CF53CEA020A789B300C8CB72 /* ViewController.swift */,
+				CF53CEA020A789B300C8CB72 /* SearchViewController.swift */,
 				CF53CED420A78AAA00C8CB72 /* ProductDetailViewController.swift */,
 				CF53CEA220A789B300C8CB72 /* Main.storyboard */,
 				CF53CEA720A789B600C8CB72 /* LaunchScreen.storyboard */,
@@ -600,7 +600,7 @@
 				CF53CED920A78B2700C8CB72 /* ProductDetails.swift in Sources */,
 				CF53CF0020A886FF00C8CB72 /* P2Label.swift in Sources */,
 				CF53CED720A78B1B00C8CB72 /* Product.swift in Sources */,
-				CF53CEA120A789B300C8CB72 /* ViewController.swift in Sources */,
+				CF53CEA120A789B300C8CB72 /* SearchViewController.swift in Sources */,
 				CF53CED520A78AAA00C8CB72 /* ProductDetailViewController.swift in Sources */,
 				CF53CEFE20A886E400C8CB72 /* P1Label.swift in Sources */,
 				CF53CEDB20A78D9800C8CB72 /* Constants.swift in Sources */,
