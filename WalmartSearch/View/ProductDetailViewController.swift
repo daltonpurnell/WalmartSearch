@@ -104,7 +104,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             }
             
             if let stock = productDetails.stock {
-                stockLabel.text = "In Stock: \(stock)"
+                stockLabel.text = "Stock: \(stock)"
             } else {
                 stockLabelHeightConstraint.constant = 0.0
             }
