@@ -156,7 +156,7 @@ class ProductDetailViewController:UIViewController, UICollectionViewDelegate, UI
             
             if let imageUrl = productDetails.mediumImageUrlString {
                 let url:URL = URL(string: imageUrl)!
-                productImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder_image"), options: .continueInBackground, completed: nil)
+                productImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder-image"), options: .continueInBackground, completed: nil)
             }
             
             if let twoDayShipping = productDetails.isTwoDayShippingAvailable {
